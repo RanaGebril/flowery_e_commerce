@@ -11,5 +11,4 @@ abstract class AppIcons {
   static const String phone = "assets/icons/phone.svg";
   static const String whatsapp = "assets/icons/whatsapp.svg";
   static const String deliveryMotor = "assets/icons/delivery_motor.svg";
-
 }
