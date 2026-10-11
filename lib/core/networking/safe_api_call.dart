@@ -24,7 +24,7 @@ class SafeApiCall {
       return  Error<T>(
         UnexpectedFailure(),
       );
-    } catch (exception, stackTrace) {
+    } catch (exception) {
       // TODO: Add production logging.
       return  Error<T>(
         UnexpectedFailure(),
