@@ -1,39 +1,37 @@
 // is result Error --> define the error type
 
-import 'package:easy_localization/easy_localization.dart';
-
 sealed class Failure {
   final String messageKey;
-
-  const Failure(this.messageKey);
+  final String? serverMessage;
+  const Failure(this.messageKey,{this.serverMessage});
 }
 
 class NetworkFailure extends Failure {
-   NetworkFailure()
-      : super('noInternetConnection'.tr());
+  const NetworkFailure()
+      : super('noInternetConnection');
 }
 
 class TimeoutFailure extends Failure {
-   TimeoutFailure()
-      : super('requestTimeout'.tr());
+  const TimeoutFailure()
+      : super('requestTimeout');
 }
 
 class ServerFailure extends Failure {
-   ServerFailure()
-      : super('serverError'.tr());
+  const ServerFailure({String? serverMessage})
+      : super('serverError',serverMessage: serverMessage);
 }
 
 class UnauthorizedFailure extends Failure {
-   UnauthorizedFailure()
-      : super('unauthorized'.tr());
+  const UnauthorizedFailure()
+      : super('unauthorized');
 }
 
 class NotFoundFailure extends Failure {
-   NotFoundFailure()
-      : super('notFound'.tr());
+  const NotFoundFailure()
+      : super('notFound');
 }
 
 class UnexpectedFailure extends Failure {
-   UnexpectedFailure()
-      : super('unexpectedError'.tr());
+  const UnexpectedFailure()
+      : super('unexpectedError');
 }

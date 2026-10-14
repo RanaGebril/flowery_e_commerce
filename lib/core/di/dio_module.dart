@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flowery_e_commerce/core/constants/app_config.dart';
 import 'package:injectable/injectable.dart';
 
 import '../networking/dio_factory.dart';
@@ -7,5 +8,5 @@ import '../networking/dio_factory.dart';
 @module
 abstract class DioModule {
   @lazySingleton
-  Dio provideDio() => DioFactory.create();
+  Dio provideDio() => DioFactory.create(baseUrl: AppConfig.baseUrl);
 }

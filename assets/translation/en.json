@@ -122,10 +122,8 @@
   "bestSellerText": "Best Seller",
   "occasionsText": "Occasion",
 
-  "connectionError": "Please check your internet connection and try again",
   "noResponseReceivedMessage": "No response received or response is not in expected format.",
   "error": "Error",
-  "unexpectedError": "Unexpected error:",
   "unexpectedErrorOccurred": "Unexpected error occurred.",
   "requestCancelled": "Request was cancelled.",
   "receiveTimeout": "Receive timeout, please try again later.",
@@ -276,7 +274,6 @@
   "googleLoginCanceled": "Login with google has been canceled",
   "permissionDenied": "You do not have permission to access this resource.",
   "unavailable": "The service is currently unavailable.",
-  "notFound": "The requested document was not found.",
   "alreadyExists": "The document already exists.",
   "resourceExhausted": "Quota exceeded or resource exhausted.",
   "cancelled": "The operation was cancelled.",
@@ -285,5 +282,12 @@
   "invalidArgument": "Invalid argument provided.",
   "aborted": "The operation was aborted.",
   "outOfRange": "The value provided is out of range.",
-  "unknownErrorMessage": "An unknown error has occurred with the following message:"
+  "unknownErrorMessage": "An unknown error has occurred with the following message:",
+
+  "noInternetConnection": "Please check your internet connection.",
+  "requestTimeout": "The request timed out. Please try again.",
+  "serverError": "Something went wrong on the server.",
+  "unauthorized": "Your session has expired. Please log in again.",
+  "notFound": "The requested resource was not found.",
+  "unexpectedError": "An unexpected error occurred. Please try again."
 }

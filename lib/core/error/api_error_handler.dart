@@ -17,7 +17,7 @@ class ApiErrorHandler {
         return  NetworkFailure();
 
       case DioExceptionType.badResponse:
-        return _handleStatusCode(exception.response?.statusCode);
+        return _handleResponse(exception.response);
 
       case DioExceptionType.cancel:
         return  UnexpectedFailure();
@@ -28,22 +28,15 @@ class ApiErrorHandler {
     }
   }
 
-  static Failure _handleStatusCode(int? statusCode) {
-    switch (statusCode) {
-      case 401:
-        return  UnauthorizedFailure();
-
-      case 404:
-        return NotFoundFailure();
-
-      case 500:
-      case 502:
-      case 503:
-      case 504:
-        return  ServerFailure();
-
-      default:
-        return  UnexpectedFailure();
-    }
+  static Failure _handleResponse(Response? res) {
+    final code = res?.statusCode;
+    final msg = _extractMessage(res?.data);
+    if (code == 401 && msg == null) return UnauthorizedFailure();
+    if (code != null && code >= 500) return ServerFailure(serverMessage: msg);
+    if (code == 404) return NotFoundFailure();
+    return ServerFailure(serverMessage: msg); // 400, 401, 409, 422...
   }
+
+  static String? _extractMessage(dynamic data) =>
+      data is Map ? (data['message'] ?? data['error'])?.toString() : null;
 }

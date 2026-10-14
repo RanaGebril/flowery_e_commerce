@@ -4,16 +4,16 @@ sealed class Result<T> {
   const Result();
 }
 
-class Success<T> extends Result<T> {
+class SuccessResult<T> extends Result<T> {
   final T data;
 
-  const Success(this.data);
+  const SuccessResult(this.data);
 }
 
-class Error<T> extends Result<T> {
+class ErrorResult<T> extends Result<T> {
   final Failure failure;
 
-const Error(this.failure);
+const ErrorResult(this.failure);
 }
 
 // طريقة نرجع بيها النجاح أو الفشل بشكل واضح ومنظّم بدل ما كل جزء في التطبيق يتعامل مع Exceptions بطريقته.

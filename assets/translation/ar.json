@@ -122,11 +122,8 @@
   "categoriesText": "التصنيفات",
   "bestSellerText": "الأكثر مبيعًا",
   "occasionsText": "المناسبات",
-
-  "connectionError": "يرجى التحقق من اتصال الإنترنت والمحاولة مرة أخرى",
   "noResponseReceivedMessage": "لم يتم استلام استجابة أو الاستجابة ليست بالتنسيق المتوقع.",
   "error": "خطأ",
-  "unexpectedError": "خطأ غير متوقع:",
   "unexpectedErrorOccurred": "حدث خطأ غير متوقع.",
   "requestCancelled": "تم إلغاء الطلب.",
   "receiveTimeout": "انتهت مهلة الاستلام، يرجى المحاولة لاحقًا.",
@@ -274,7 +271,6 @@
   "googleLoginCanceled": "تم إلغاء تسجيل الدخول باستخدام Google",
   "permissionDenied": "ليست لديك الصلاحية للوصول إلى هذا المورد.",
   "unavailable": "الخدمة غير متوفرة حاليًا.",
-  "notFound": "المستند المطلوب غير موجود.",
   "alreadyExists": "المستند موجود بالفعل.",
   "resourceExhausted": "تم استهلاك الموارد أو تجاوز الحد.",
   "cancelled": "تم إلغاء العملية.",
@@ -283,5 +279,12 @@
   "invalidArgument": "تم تقديم وسيط غير صالح.",
   "aborted": "تم إيقاف العملية.",
   "outOfRange": "القيمة المقدمة خارج النطاق المسموح به.",
-  "unknownErrorMessage": "حدث خطأ غير معروف بالرسالة التالية:"
+  "unknownErrorMessage": "حدث خطأ غير معروف بالرسالة التالية:",
+
+  "noInternetConnection": "تأكدي من اتصالك بالإنترنت.",
+  "requestTimeout": "انتهت مهلة الطلب. حاولي مرة أخرى.",
+  "serverError": "حدث خطأ في الخادم. حاولي مرة أخرى.",
+  "unauthorized": "انتهت صلاحية تسجيل الدخول. سجّلي الدخول مرة أخرى.",
+  "notFound": "البيانات المطلوبة غير موجودة.",
+  "unexpectedError": "حدث خطأ غير متوقع. حاولي مرة أخرى."
 }

@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import 'app_interceptor.dart';
@@ -7,10 +8,10 @@ import 'app_interceptor.dart';
 class DioFactory {
   DioFactory._();
 
-  static Dio create() {
+  static Dio create({required String baseUrl}) {
     final dio = Dio(
       BaseOptions(
-        baseUrl: 'https://api.example.com',
+        baseUrl: baseUrl,
         connectTimeout: const Duration(seconds: 30),
         receiveTimeout: const Duration(seconds: 30),
         sendTimeout: const Duration(seconds: 30),
@@ -21,7 +22,10 @@ class DioFactory {
       ),
     );
 
-    dio.interceptors.add(PrettyDioLogger(
+    dio.interceptors.add(AppInterceptor());
+
+    if(kDebugMode){
+      dio.interceptors.add(PrettyDioLogger(
         requestHeader: true,
         requestBody: true,
         responseBody: true,
@@ -29,9 +33,10 @@ class DioFactory {
         error: true,
         compact: true,
         maxWidth: 90,
-    )
-    );
-    dio.interceptors.add(AppInterceptor());
+      )
+      );
+    }
+
 
     return dio;
   }
