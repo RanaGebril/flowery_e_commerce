@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flowery_e_commerce/core/responsive/size_provider.dart';
 import 'package:flowery_e_commerce/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'core/di/di.dart';
@@ -25,12 +26,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: appRouter,
-      theme: AppTheme.lightTheme,
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
+      return SizeProvider(
+      designSize: Size(375, 812),
+      deviceWidth: MediaQuery.of(context).size.width,
+      deviceHeight: MediaQuery.of(context).size.height,
+      child: MaterialApp.router(
+        routerConfig: appRouter,
+        theme: AppTheme.lightTheme,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        debugShowCheckedModeBanner: false,
+      ),
     );
   }
 }

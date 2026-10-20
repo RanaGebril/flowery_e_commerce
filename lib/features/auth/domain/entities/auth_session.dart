@@ -1,0 +1,12 @@
+import 'package:equatable/equatable.dart';
+import 'package:flowery_e_commerce/features/auth/domain/entities/user_entity.dart';
+
+class AuthSession extends Equatable {
+  final UserEntity user;
+  final String token;
+
+  const AuthSession({required this.user, required this.token});
+
+  @override
+  List<Object?> get props => [user, token];
+}

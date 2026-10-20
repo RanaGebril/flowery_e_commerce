@@ -4,16 +4,28 @@
   "emailHint": "Enter your email",
   "password": "Password",
   "passwordHint": "Enter your password",
+  "passwordValidation1": "Password is required",
+  "passwordValidation2": "Password must be at least 8 characters",
+  "passwordValidation3": "Password cannot contain spaces",
+  "passwordValidation4": "Password must contain at least one number",
+  "passwordValidation5": "Password must not exceed 20 characters",
+  "passwordValidation6": "Password must contain an uppercase letter",
+  "passwordValidation7": "Password must contain a special character",
+  "passwordValidation8": "Password must contain a lowercase letter",
+  "emailValidation1": "Email is required",
+  "emailValidation2": "Please enter a valid email address",
   "rememberMe": "Remember me",
   "forgetPassword": "Forget password?",
+  "continueAsGuest": "Continue as guest",
   "donNotHaveAccount": "Don't have an account?",
   "signup": "Sign up",
-  "continueAsGuest": "Continue as guest",
+  "loginSuccess": "Login successfully",
+
 
   "forgetPassword2": "Forget password",
   "enterRegisteredEmail": "Please enter your email associated to your account",
   "confirmButton": "Confirm",
-  "success": "success",
+
 
   "search": "Search",
   "notProvided": "Not Provided",
@@ -100,18 +112,8 @@
   "emptyTextValidation": "This field is required",
   "phoneNumberValidation": "Phone number field is required",
   "phoneNumberValidation2": "Phone Number should consist of 11 digits",
-  "emailValidation": "This Email is not valid",
-  "emailValidation2": "Enter a valid email",
-  "passwordValidation": "Invalid password",
-  "passwordValidation2": "Password field should contain at least 8 characters",
-  "confirmPasswordValidation": "Confirm password field is required",
-  "confirmPasswordValidation2": "Password does not match, please check the entered password",
-  "passwordValidation3": "Password cannot contain spaces",
-  "passwordValidation4": "Password must contain at least one number",
-  "passwordValidation5": "Password must not exceed 20 characters",
-  "passwordValidation6": "Password must contain a capital letter",
-  "passwordValidation7": "Password must contain a special character",
-  "otpValidation": "The code sent to your email address is required",
+
+   "otpValidation": "The code sent to your email address is required",
   "otpValidation2": "You have to enter the 6-digit code",
 
   "egp": "EGP",
@@ -289,5 +291,8 @@
   "serverError": "Something went wrong on the server.",
   "unauthorized": "Your session has expired. Please log in again.",
   "notFound": "The requested resource was not found.",
-  "unexpectedError": "An unexpected error occurred. Please try again."
+  "unexpectedError": "An unexpected error occurred. Please try again.",
+
+  "confirmPasswordValidation": "Confirm password field is required",
+  "confirmPasswordValidation2": "Password does not match, please check the entered password"
 }

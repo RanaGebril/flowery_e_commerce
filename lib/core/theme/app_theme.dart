@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class AppTheme {
   AppTheme._();
 
-  static final ThemeData lightTheme=ThemeData(
-brightness: Brightness.light,
+  static final ThemeData lightTheme = ThemeData(
+    brightness: Brightness.light,
     colorScheme: ColorScheme.light(
       primary: AppColors.pink,
       onPrimary: AppColors.white[70]!,
@@ -18,31 +18,33 @@ brightness: Brightness.light,
     ),
 
     textTheme: TextTheme(
-      displayLarge: AppTextStyles.displayLarge.copyWith(
-        color: AppColors.black,
-      ),
+      displayLarge: AppTextStyles.displayLarge.copyWith(color: AppColors.black),
       headlineLarge: AppTextStyles.headlineLarge.copyWith(
         color: AppColors.black,
       ),
       headlineMedium: AppTextStyles.headlineMedium.copyWith(
         color: AppColors.black,
       ),
-      titleLarge: AppTextStyles.titleLarge.copyWith(
-        color: AppColors.black,
-      ),
-      bodyLarge: AppTextStyles.bodyLarge.copyWith(
-        color: AppColors.black,
-      ),
-      bodyMedium: AppTextStyles.bodyMedium.copyWith(
-        color: AppColors.black,
-      ),
-      bodySmall: AppTextStyles.bodySmall.copyWith(
-        color: AppColors.black,
-      ),
-      labelLarge: AppTextStyles.labelLarge.copyWith(
+      titleLarge: AppTextStyles.titleLarge.copyWith(color: AppColors.black),
+      bodyLarge: AppTextStyles.bodyLarge.copyWith(color: AppColors.black),
+      bodyMedium: AppTextStyles.bodyMedium.copyWith(color: AppColors.black),
+      bodySmall: AppTextStyles.bodySmall.copyWith(color: AppColors.black),
+      labelLarge: AppTextStyles.labelLarge.copyWith(color: AppColors.black),
+
+      displaySmall: AppTextStyles.displaySmall.copyWith(color: AppColors.black),
+    ),
+    appBarTheme: AppBarThemeData(
+      centerTitle: true,
+      titleTextStyle: AppTextStyles.headlineLarge.copyWith(
         color: AppColors.black,
       ),
     ),
+    checkboxTheme: CheckboxThemeData(
+       splashRadius: 0,
+      side: BorderSide(
+        color: AppColors.white[90]!,
+      ),
 
+    )
   );
 }

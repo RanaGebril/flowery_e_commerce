@@ -3,10 +3,10 @@ abstract class RoutesNames {
   static const String occasion = 'occasion';
   static const String categories = 'categories';
   static const String details="details";
-  static const String signup = '/signup';
-  static const String login = '/login';
+  static const String signup = 'signup';
+  static const String login = 'login';
 
-  static const String forgetPass = '/forgetPass';
+  static const String forgetPassword = 'forgetPass';
   static const String verifyPassword = '/verifyPassword';
   static const String resetPassword = '/resetPassword';
 //
