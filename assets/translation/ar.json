@@ -19,17 +19,6 @@
   "continueAsGuest": "المتابعة كضيف",
   "donNotHaveAccount": "ليس لديك حساب؟",
   "signup": "إنشاء حساب",
-  "loginSuccess": "تم تسجيل الدخول بنجاح",
-
-
-  "forgetPassword2": "نسيت كلمة المرور",
-  "enterRegisteredEmail": "من فضلك أدخل البريد الإلكتروني المرتبط بحسابك",
-  "confirmButton": "تأكيد",
-  "success": "نجاح",
-
-  "search": "بحث",
-  "notProvided": "غير متوفر",
-
   "firstName": "الاسم الأول",
   "firstNameHint": "أدخل اسمك الأول",
   "lastName": "اسم العائلة",
@@ -46,6 +35,25 @@
   "createAnAccountYouAgree": "بإنشائك حساب، فإنك توافق على ",
   "termsAndConditions": "الشروط والأحكام",
   "alreadyHaveAnAccount": "لديك حساب بالفعل؟",
+  "nameValidation1": "من فضلك أدخل الاسم",
+  "nameValidation2": "يجب ألا يقل الاسم عن حرفين",
+  "nameValidation3": "من فضلك أدخل اسمًا صحيحًا",
+  "phoneValidation1": "من فضلك أدخل رقم الهاتف",
+  "phoneValidation2": "من فضلك أدخل رقم هاتف صحيحًا",
+  "confirmPasswordValidation1": "من فضلك أكد كلمة المرور",
+  "confirmPasswordValidation2": "كلمتا المرور غير متطابقتين",
+
+
+  "forgetPassword2": "نسيت كلمة المرور",
+  "enterRegisteredEmail": "من فضلك أدخل البريد الإلكتروني المرتبط بحسابك",
+  "confirmButton": "تأكيد",
+  "success": "نجاح",
+
+  "search": "بحث",
+  "notProvided": "غير متوفر",
+
+
+
   "editProfile": "تعديل الملف الشخصي",
   "editProfileUpdateButton": "تحديث",
   "changePassword": "تغيير كلمة المرور",
@@ -114,8 +122,7 @@
   "phoneNumberValidation": "حقل رقم الهاتف مطلوب",
   "phoneNumberValidation2": "رقم الهاتف يجب أن يتكون من 11 رقمًا",
   "passwordValidation": "كلمة المرور غير صالحة",
-  "confirmPasswordValidation": "حقل تأكيد كلمة المرور مطلوب",
-  "confirmPasswordValidation2": "كلمة المرور غير متطابقة، يرجى التحقق من كلمة المرور المدخلة",
+
  "otpValidation": "الرمز المرسل إلى بريدك الإلكتروني مطلوب",
   "otpValidation2": "يجب إدخال الرمز المكون من 6 أرقام",
 

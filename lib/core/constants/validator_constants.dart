@@ -14,4 +14,14 @@ abstract interface class ValidatorConstants {
   static final RegExp passwordSpecialCharacterRegex = RegExp(
     r'[!@#$%^&*(),.?":{}|<>_\-+=/\\[\]~`]',
   );
+
+
+  static final RegExp nameRegex = RegExp(
+    r"^[a-zA-Z\u0600-\u06FF]+(?:[ '-][a-zA-Z\u0600-\u06FF]+)*$",
+  );
+
+  static final RegExp phoneRegex = RegExp(
+    r'^(?:\+20|0020|0)?1[0125][0-9]{8}$',
+  );
+
 }

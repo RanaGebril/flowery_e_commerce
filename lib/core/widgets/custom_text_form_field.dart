@@ -31,6 +31,7 @@ class CustomTextFormField extends StatelessWidget {
     this.disabledBorderColor,
     this.isReadOnly = false,
     this.floatingLabelBehavior = FloatingLabelBehavior.auto,
+    this.prefixText
   });
   final String? initialValue;
   final String? hintText;
@@ -59,6 +60,8 @@ class CustomTextFormField extends StatelessWidget {
   final Color? disabledBorderColor;
   final bool? isReadOnly;
   final FloatingLabelBehavior floatingLabelBehavior;
+  final String? prefixText;
+
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -149,6 +152,11 @@ class CustomTextFormField extends StatelessWidget {
         ),
         errorStyle: textTheme.bodySmall?.copyWith(color: colorScheme.error),
         errorMaxLines: 3,
+        prefixText: prefixText,
+        prefixStyle: textTheme.bodyMedium?.copyWith(
+          color: colorScheme.primary,
+          fontWeight: FontWeight.w600,
+        ),
       ),
       maxLength: maxLength,
       onChanged: onChanged,
@@ -157,6 +165,7 @@ class CustomTextFormField extends StatelessWidget {
       validator: validator,
       enabled: enabled,
       cursorColor: colorScheme.onSurface,
+
     );
   }
 

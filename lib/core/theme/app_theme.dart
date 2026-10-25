@@ -18,19 +18,19 @@ class AppTheme {
     ),
 
     textTheme: TextTheme(
-      displayLarge: AppTextStyles.displayLarge.copyWith(color: AppColors.black),
+      // displayLarge: AppTextStyles.displayLarge.copyWith(color: AppColors.black),
       headlineLarge: AppTextStyles.headlineLarge.copyWith(
         color: AppColors.black,
       ),
       headlineMedium: AppTextStyles.headlineMedium.copyWith(
-        color: AppColors.black,
+        color: AppColors.white[90],
       ),
       titleLarge: AppTextStyles.titleLarge.copyWith(color: AppColors.black),
       bodyLarge: AppTextStyles.bodyLarge.copyWith(color: AppColors.black),
       bodyMedium: AppTextStyles.bodyMedium.copyWith(color: AppColors.black),
       bodySmall: AppTextStyles.bodySmall.copyWith(color: AppColors.black),
       labelLarge: AppTextStyles.labelLarge.copyWith(color: AppColors.black),
-
+labelSmall: AppTextStyles.labelSmall.copyWith(color: AppColors.black,decorationColor: AppColors.black),
       displaySmall: AppTextStyles.displaySmall.copyWith(color: AppColors.black),
     ),
     appBarTheme: AppBarThemeData(

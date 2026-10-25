@@ -30,21 +30,23 @@ abstract final class AppTextStyles {
     decoration: TextDecoration.underline,
     fontFamily: TextConstants.inter,
   );
-
-
-
-
-  static const TextStyle displayLarge = TextStyle(
-    fontSize: 32,
-    fontWeight: FontWeight.w700,
+  static const TextStyle headlineMedium = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
     fontFamily: TextConstants.inter,
   );
 
-  static const TextStyle headlineMedium = TextStyle(
-    fontSize: 20,
+
+
+  static const TextStyle labelSmall = TextStyle(
+    fontSize: 12,
     fontWeight: FontWeight.w600,
     fontFamily: TextConstants.inter,
+    decoration: TextDecoration.underline
+
   );
+
+
 
   static const TextStyle titleLarge = TextStyle(
     fontSize: 18,

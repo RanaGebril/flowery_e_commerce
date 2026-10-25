@@ -1,7 +1,7 @@
 abstract final class EndpointsConstants {
   // auth
   static const String login = 'auth/signin';
-  static const String register = 'auth/signup';
+  static const String signUp = 'auth/signup';
   static const String forgetPassword = 'auth/forgotPassword';
   static const String resendCode = 'auth/forgotPassword';
   static const String verification = 'auth/verifyResetCode';

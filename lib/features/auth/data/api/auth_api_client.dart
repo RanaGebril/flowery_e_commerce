@@ -1,7 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flowery_e_commerce/core/constants/endpoints_constants.dart';
 import 'package:flowery_e_commerce/features/auth/data/models/request/login_request_dto.dart';
-import 'package:flowery_e_commerce/features/auth/data/models/response/login_response_dto.dart';
+import 'package:flowery_e_commerce/features/auth/data/models/request/sign_up_request_dto.dart';
+import 'package:flowery_e_commerce/features/auth/data/models/response/auth_response_dto.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -14,7 +15,12 @@ abstract class AuthApiClient {
   factory AuthApiClient(Dio dio) = _AuthApiClient;
 
   @POST(EndpointsConstants.login)
-  Future<LoginResponseDto> login(
+  Future<AuthResponseDto> login(
       @Body() LoginRequestDto body
+      );
+
+  @POST(EndpointsConstants.signUp)
+  Future<AuthResponseDto> signUp(
+      @Body() SignUpRequestDto body
       );
 }
