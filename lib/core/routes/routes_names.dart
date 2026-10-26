@@ -1,42 +1,46 @@
 abstract class RoutesNames {
-  static const String home = 'home';
-  static const String occasion = 'occasion';
-  static const String categories = 'categories';
-  static const String details="details";
-  static const String signup = 'signup';
+  static const String splash = '/splash';
   static const String login = 'login';
-  static const String uploadPhoto = 'uploadPhoto';
+  static const String signup = 'signup';
   static const String forgetPassword = 'forgetPass';
   static const String verifyPassword = '/verifyPassword';
   static const String resetPassword = '/resetPassword';
-//
-//   static const String bestSellers = 'bestSellers';
-//   static const String occasions = '/occasions';
-//   static const String productByCat = "productByCat";
-// //AllProductsPage
-//   static const String cart = "/cart";
-//   static const String allProducts="/AllProductsPage";
-//   static const String about="about";
-//   static const String termsAndCondition="terms";
-// //EditProfilePage
-//   static const String editProfilePage="/EditProfilePage";
-//   static const String changePassword="/ChangePasswordScreen";
-//   static const String search="search";
-//
-//
-//   static const String addAddress="/addAddress";
-//   //SavedAddress
-//   static const String saveAddress="/SavedAddress";
-//
-//   static const String checkoutScreen="/CheckoutScreen";
-//
-//   static const String notificationspage="/NotificationsPage";
-//   static const String orderspage="/Orders";
-//
-//   static const String paymentView="/PaymentViewPage";
-//   static const String trackingMap="/trackingMap";
-//   static const String trackingOrderPage="trackingOrder";
-//   static const String orderPlacedSuccessfullyPage="OrderPlacedSuccessfullyPage";
-//   static const String waitingForConfirmationPage="WaitingForConfirmationPage";
-//   static const String orderStatesPages="OrderStatesPages";
+  static const String home = 'home';
+  static const String occasion = 'occasion';
+  static const String categories = 'categories';
+  static const String details = "details";
+
+
+  static const String uploadPhoto = 'uploadPhoto';
+
+
+  //   static const String bestSellers = 'bestSellers';
+  //   static const String occasions = '/occasions';
+  //   static const String productByCat = "productByCat";
+  // //AllProductsPage
+  //   static const String cart = "/cart";
+  //   static const String allProducts="/AllProductsPage";
+  //   static const String about="about";
+  //   static const String termsAndCondition="terms";
+  // //EditProfilePage
+  //   static const String editProfilePage="/EditProfilePage";
+  //   static const String changePassword="/ChangePasswordScreen";
+  //   static const String search="search";
+  //
+  //
+  //   static const String addAddress="/addAddress";
+  //   //SavedAddress
+  //   static const String saveAddress="/SavedAddress";
+  //
+  //   static const String checkoutScreen="/CheckoutScreen";
+  //
+  //   static const String notificationspage="/NotificationsPage";
+  //   static const String orderspage="/Orders";
+  //
+  //   static const String paymentView="/PaymentViewPage";
+  //   static const String trackingMap="/trackingMap";
+  //   static const String trackingOrderPage="trackingOrder";
+  //   static const String orderPlacedSuccessfullyPage="OrderPlacedSuccessfullyPage";
+  //   static const String waitingForConfirmationPage="WaitingForConfirmationPage";
+  //   static const String orderStatesPages="OrderStatesPages";
 }
