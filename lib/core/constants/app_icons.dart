@@ -1,6 +1,6 @@
 abstract class AppIcons {
   //svg
-  static const String logo = "assets/icons/logo.svg";
+  static const String logo = "assets/icons/flowery_logo.svg";
   static const String card = "assets/icons/card.svg";
   static const String diamond = "assets/icons/diamond.svg";
   static const String flower = "assets/icons/flower.svg";

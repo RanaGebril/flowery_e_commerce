@@ -1,4 +1,6 @@
 {
+  "appName": "فلاوري",
+  "splashTagline": "ورد فريش، يوصلك بكل حب",
   "login": "تسجيل الدخول",
   "email": "البريد الإلكتروني",
   "emailHint": "أدخل بريدك الإلكتروني",
@@ -52,6 +54,7 @@
   "continue": "متابعة",
   "skip": "تخطي",
   "profilePhoto": "الصورة الشخصية",
+  "failedToUploadProfilePhoto": "فشل رفع الصورة الشخصية. يُرجى المحاولة مرة أخرى.",
 
 
   "forgetPassword2": "نسيت كلمة المرور",

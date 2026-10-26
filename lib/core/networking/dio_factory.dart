@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:flowery_e_commerce/core/di/di.dart';
+import 'package:flowery_e_commerce/core/storage/session_storage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
@@ -22,7 +24,7 @@ class DioFactory {
       ),
     );
 
-    dio.interceptors.add(AppInterceptor());
+    dio.interceptors.add(AppInterceptor(getIt<SessionStorage>()));
 
     if(kDebugMode){
       dio.interceptors.add(PrettyDioLogger(

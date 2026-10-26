@@ -1,4 +1,6 @@
 {
+  "appName": "Flowery",
+  "splashTagline": "Fresh flowers, delivered with love",
   "login": "Login",
   "email": "Email",
   "emailHint": "Enter email",
@@ -52,8 +54,7 @@
   "continue": "Continue",
   "skip": "Skip",
   "profilePhoto": "Profile Photo",
-
-
+  "failedToUploadProfilePhoto": "Failed to upload profile photo. Please try again.",
   "forgetPassword2": "Forget password",
   "enterRegisteredEmail": "Please enter your email associated to your account",
   "confirmButton": "Confirm",
