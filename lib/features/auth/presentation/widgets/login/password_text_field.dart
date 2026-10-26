@@ -11,6 +11,8 @@ class PasswordTextField extends StatefulWidget {
     required this.hintText,
     this.action,
     this.validator,
+    this.prefixIcon,
+    this.showSuffixIcon = true,
   });
 
   final TextEditingController controller;
@@ -18,6 +20,8 @@ class PasswordTextField extends StatefulWidget {
   final String hintText;
   final TextInputAction? action;
   final String? Function(String?)? validator;
+  final Widget? prefixIcon;
+  final bool showSuffixIcon;
 
   @override
   State<PasswordTextField> createState() =>
@@ -37,19 +41,18 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       hintText: widget.hintText.tr(),
       keyboardType: TextInputType.text,
       textInputAction: widget.action ?? TextInputAction.done,
-      prefixIcon: Icon(
-        Icons.password,
-        color: colorScheme.primary,
-      ),
+      prefixIcon: widget.prefixIcon,
       validator: widget.validator ?? Validators.passwordValidator,
       obscureText: isHidden,
-      suffixIcon: GestureDetector(
+      suffixIcon: widget.showSuffixIcon
+          ? GestureDetector(
         onTap: () => setState(() => isHidden = !isHidden),
         child: Icon(
           isHidden ? Icons.visibility : Icons.visibility_off,
           color: colorScheme.primary,
         ),
-      ),
+      )
+          : null,
     );
   }
 }

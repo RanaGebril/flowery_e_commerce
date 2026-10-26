@@ -17,9 +17,7 @@ class SignUpBody extends StatelessWidget {
     return BlocListener<SignUpBloc, SignUpState>(
       listener: (context, state) {
         if (state.signUpState.isSuccess) {
-          ///to do 👽👽👽👽
-          context.pushReplacementNamed(RoutesNames.home);
-          print(state.signUpState.data!.user.firstName);
+          context.pushReplacementNamed(RoutesNames.uploadPhoto);
         }
         if (state.signUpState.isFailure) {
           Loaders.showErrorMessage(

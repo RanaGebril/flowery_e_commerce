@@ -12,7 +12,7 @@ class SignUpFooter extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     return Column(
       children: [
-        SizedBox(height: context.setHeight(16)),
+        SizedBox(height: context.setHeight(5)),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

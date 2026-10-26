@@ -1,7 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flowery_e_commerce/core/widgets/custom_elevated_btn.dart';
-import 'package:flowery_e_commerce/features/auth/presentation/bloc/login/login_bloc.dart';
-import 'package:flowery_e_commerce/features/auth/presentation/bloc/login/login_state.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/bloc/sign_up/sign_up_bloc.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/bloc/sign_up/sign_up_state.dart';
 import 'package:flutter/material.dart';

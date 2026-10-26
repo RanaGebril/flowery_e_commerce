@@ -13,6 +13,8 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   SignUpBloc(this._signUpUseCase) : super(SignUpState()) {
     on<SignUpRequestEvent>(_signUp);
     on<SelectGenderEvent>(_selectGender);
+    on<UpdateProfilePhotoEvent>(_updateProfilePhoto);
+    on<RemoveProfilePhotoEvent>(_removeProfilePhoto);
   }
 
   _signUp(SignUpRequestEvent event, Emitter<SignUpState> emit) async {
@@ -34,4 +36,18 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
       ),
     );
   }
+
+  void _updateProfilePhoto(
+      UpdateProfilePhotoEvent event,
+      Emitter<SignUpState> emit,
+      ) {
+    emit(state.copyWith(photo: event.photo));
+  }
+
+  _removeProfilePhoto(
+    RemoveProfilePhotoEvent event,
+        Emitter<SignUpState> emit,
+    ) {
+    emit(state.copyWith(photo: null));
+}
 }

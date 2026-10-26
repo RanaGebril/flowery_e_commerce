@@ -99,7 +99,6 @@ class CustomTextFormField extends StatelessWidget {
             hintStyle ??
             textTheme.bodyMedium?.copyWith(color: colorScheme.onPrimary),
         hintText: hintText,
-
         enabledBorder: buildOutlinedBorder(
           context: context,
           borderColor: colorScheme.onPrimary,

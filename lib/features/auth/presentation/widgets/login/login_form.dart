@@ -60,7 +60,15 @@ class _LoginFormState extends State<LoginForm> {
             validator: Validators.validateEmail,
           ),
           SizedBox(height: context.setHeight(20)),
-          PasswordTextField(controller: passwordController,label: 'password',hintText: 'passwordHint',),
+          PasswordTextField(
+            controller: passwordController,
+            label: 'password',
+            hintText: 'passwordHint',
+            prefixIcon: Icon(
+              Icons.lock_outline,
+              color: Theme.of(context).colorScheme.primary,
+            ),
+          ),
           SizedBox(height: context.setHeight(10)),
           const RememberMeRow(),
           SizedBox(height: context.setHeight(64)),

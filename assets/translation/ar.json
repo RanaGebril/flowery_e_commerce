@@ -42,6 +42,16 @@
   "phoneValidation2": "من فضلك أدخل رقم هاتف صحيحًا",
   "confirmPasswordValidation1": "من فضلك أكد كلمة المرور",
   "confirmPasswordValidation2": "كلمتا المرور غير متطابقتين",
+  "gallery": "المعرض",
+  "camera": "الكاميرا",
+  "removePhoto": "إزالة الصورة",
+  "uploadPhotoTitle": "الصورة الشخصية",
+  "uploadPhotoHeadline": "أضف صورتك",
+  "uploadPhotoSubtitle": "هذه الخطوة اختيارية. يمكنك تغييرها في أي وقت.",
+  "uploadPhoto": "اختيار صورة",
+  "continue": "متابعة",
+  "skip": "تخطي",
+  "profilePhoto": "الصورة الشخصية",
 
 
   "forgetPassword2": "نسيت كلمة المرور",

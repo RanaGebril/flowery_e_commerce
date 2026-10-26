@@ -42,6 +42,17 @@
   "phoneValidation2": "Please enter a valid phone number",
   "confirmPasswordValidation1": "Please confirm your password",
   "confirmPasswordValidation2": "Passwords do not match",
+  "gallery": "Gallery",
+  "camera": "Camera",
+  "removePhoto": "Remove photo",
+  "uploadPhotoTitle": "Profile Photo",
+  "uploadPhotoHeadline": "Add your photo",
+  "uploadPhotoSubtitle": "This is optional. You can always change it later.",
+  "uploadPhoto": "Choose photo",
+  "continue": "Continue",
+  "skip": "Skip",
+  "profilePhoto": "Profile Photo",
+
 
   "forgetPassword2": "Forget password",
   "enterRegisteredEmail": "Please enter your email associated to your account",

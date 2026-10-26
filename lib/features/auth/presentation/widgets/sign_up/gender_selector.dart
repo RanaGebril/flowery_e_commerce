@@ -17,7 +17,7 @@ class GenderSelector extends StatelessWidget {
     return Row(
       children: [
         Text('genderLabel'.tr(), style: textTheme.headlineMedium),
-        SizedBox(width: context.setWidth(40)),
+        SizedBox(width: context.setWidth(10)),
         Expanded(
           child: BlocSelector<SignUpBloc, SignUpState, String>(
             selector: (state) => state.selectedGender,

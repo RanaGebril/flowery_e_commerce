@@ -5,7 +5,7 @@ abstract class RoutesNames {
   static const String details="details";
   static const String signup = 'signup';
   static const String login = 'login';
-
+  static const String uploadPhoto = 'uploadPhoto';
   static const String forgetPassword = 'forgetPass';
   static const String verifyPassword = '/verifyPassword';
   static const String resetPassword = '/resetPassword';

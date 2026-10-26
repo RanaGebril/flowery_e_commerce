@@ -35,6 +35,8 @@ labelSmall: AppTextStyles.labelSmall.copyWith(color: AppColors.black,decorationC
     ),
     appBarTheme: AppBarThemeData(
       centerTitle: true,
+      elevation: 0,
+      scrolledUnderElevation: 0,
       titleTextStyle: AppTextStyles.headlineLarge.copyWith(
         color: AppColors.black,
       ),
