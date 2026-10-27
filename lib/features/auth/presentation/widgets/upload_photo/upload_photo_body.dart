@@ -3,6 +3,7 @@ import 'package:flowery_e_commerce/core/di/di.dart';
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
 import 'package:flowery_e_commerce/core/routes/routes_names.dart';
 import 'package:flowery_e_commerce/core/widgets/custom_elevated_btn.dart';
+import 'package:flowery_e_commerce/core/widgets/loader.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/bloc/sign_up/sign_up_bloc.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/bloc/sign_up/sign_up_event.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/bloc/sign_up/sign_up_state.dart';
@@ -41,31 +42,57 @@ class UploadPhotoBody extends StatelessWidget {
             ),
             SizedBox(height: context.setHeight(40)),
 
-            BlocBuilder<SignUpBloc, SignUpState>(
-              buildWhen: (previous, current) =>
-              previous.photo != current.photo,
+            BlocConsumer<SignUpBloc, SignUpState>(
+              listenWhen: (previous, current) =>
+                  previous.uploadPhotoState.status !=
+                  current.uploadPhotoState.status,
+              listener: (context, state) {
+                if (state.uploadPhotoState.isSuccess) {
+                  context.pushReplacementNamed(RoutesNames.home);
+                }
+
+                if (state.uploadPhotoState.isFailure) {
+                  Loaders.showErrorMessage(
+                    message: 'failedToUploadProfilePhoto'.tr(),
+                    context: context,
+                  );
+                }
+              },
               builder: (context, state) {
+                final isLoading = state.uploadPhotoState.isLoading;
+
                 return Column(
                   children: [
                     ProfilePhotoPicker(
                       photo: state.photo,
-                      onChanged: (file) => context
-                          .read<SignUpBloc>()
-                          .add(UpdateProfilePhotoEvent(file)),
+                      onChanged: (file) {
+                        if (file == null) {
+                          context.read<SignUpBloc>().add(
+                            RemoveProfilePhotoEvent(),
+                          );
+                        } else {
+                          context.read<SignUpBloc>().add(
+                            UpdateProfilePhotoEvent(file),
+                          );
+                        }
+                      },
                     ),
                     SizedBox(height: context.setHeight(48)),
                     CustomElevatedButton(
-                      buttonTitle:
-                      state.photo != null ? 'continue'.tr() : 'skip'.tr(),
+                      isLoading: isLoading,
+                      buttonTitle: state.photo != null
+                          ? 'continue'.tr()
+                          : 'skip'.tr(),
                       onPressed: () {
-                        if (state.photo != null) {
-                          // TODO: upload the photo here (add your upload event),
-                          // then navigate after it succeeds.
-                        }
-                        context.pushReplacementNamed(RoutesNames.home);
-                      },
+                              if (state.photo == null) {
+                                context.pushReplacementNamed(RoutesNames.home);
+                              } else {
+                                context.read<SignUpBloc>().add(
+                                  UploadProfilePhotoEvent(photo: state.photo!),
+                                );
+                              }
+                            },
                     ),
-
                   ],
                 );
               },

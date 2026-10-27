@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flowery_e_commerce/core/result/result.dart';
 import 'package:flowery_e_commerce/features/auth/domain/entities/auth_session.dart';
 import 'package:flowery_e_commerce/features/auth/domain/entities/sign_up_entity.dart';
@@ -11,4 +13,5 @@ abstract interface class AuthRepository {
 
   Future<Result<AuthSession>> signUp({required SignUpEntity user});
 
+  Future<Result<String>> uploadProfilePhoto({required File photo});
 }

@@ -33,7 +33,7 @@ class RememberMeRow extends StatelessWidget {
         Text("rememberMe".tr(), style: textTheme.bodySmall),
         const Spacer(),
         GestureDetector(
-          onTap: () => context.pushNamed(RoutesNames.forgetPassword),
+          onTap: () => context.pushNamed(RoutesNames.resetPassword),
           child: Text("forgetPassword".tr(), style: textTheme.displaySmall),
         ),
       ],

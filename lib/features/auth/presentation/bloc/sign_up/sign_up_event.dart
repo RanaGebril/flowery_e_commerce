@@ -25,3 +25,9 @@ class UpdateProfilePhotoEvent extends SignUpEvent {
 class RemoveProfilePhotoEvent extends SignUpEvent {
   RemoveProfilePhotoEvent();
 }
+
+class UploadProfilePhotoEvent extends SignUpEvent {
+  final File photo;
+
+  UploadProfilePhotoEvent({required this.photo});
+}

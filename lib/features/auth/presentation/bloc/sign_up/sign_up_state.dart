@@ -8,22 +8,26 @@ class SignUpState extends Equatable {
   final StateStatus<AuthSession> signUpState;
   final String selectedGender;
   final File? photo;
+  final StateStatus<String> uploadPhotoState;
 
   const SignUpState({
     this.signUpState = const StateStatus.initial(),
     this.selectedGender = 'female',
-    this.photo
+    this.photo,
+    this.uploadPhotoState = const StateStatus.initial(),
   });
 
   SignUpState copyWith({
     StateStatus<AuthSession>? signUpState,
     String? selectedGender,
-    File? photo
+    File? photo,
+    StateStatus<String>? uploadPhotoState,
   }) {
     return SignUpState(
       signUpState: signUpState ?? this.signUpState,
       selectedGender: selectedGender ?? this.selectedGender,
-      photo: photo
+      photo: photo,
+      uploadPhotoState: uploadPhotoState ?? this.uploadPhotoState,
     );
   }
 
@@ -31,6 +35,7 @@ class SignUpState extends Equatable {
   List<Object?> get props => [
     signUpState,
     selectedGender,
-    photo
+    photo,
+    uploadPhotoState,
   ];
 }

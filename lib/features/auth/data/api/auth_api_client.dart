@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flowery_e_commerce/core/constants/endpoints_constants.dart';
 import 'package:flowery_e_commerce/features/auth/data/models/request/login_request_dto.dart';
@@ -22,5 +24,11 @@ abstract class AuthApiClient {
   @POST(EndpointsConstants.signUp)
   Future<AuthResponseDto> signUp(
       @Body() SignUpRequestDto body
+      );
+
+  @MultiPart()
+  @PUT(EndpointsConstants.uploadProfileImage)
+  Future<String>uploadProfilePhoto(
+  @Part(name: 'photo') File photo,
       );
 }
