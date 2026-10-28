@@ -64,6 +64,10 @@
   "resend": "إعادة الإرسال؟",
   "resetPasswordTitle": "إعادة تعيين كلمة المرور",
   "resetPasswordSubTitle": "يجب ألا تكون كلمة المرور فارغة ويجب أن تحتوي على 6 أحرف على الأقل مع حرف كبير ورقم واحد على الأقل",
+  "error": "حدث خطأ.",
+  "noCategoriesFound": "لا توجد تصنيفات",
+
+
 
   "search": "بحث",
   "notProvided": "غير متوفر",
@@ -146,7 +150,6 @@
   "bestSellerText": "الأكثر مبيعًا",
   "occasionsText": "المناسبات",
   "noResponseReceivedMessage": "لم يتم استلام استجابة أو الاستجابة ليست بالتنسيق المتوقع.",
-  "error": "خطأ",
   "unexpectedErrorOccurred": "حدث خطأ غير متوقع.",
   "requestCancelled": "تم إلغاء الطلب.",
   "receiveTimeout": "انتهت مهلة الاستلام، يرجى المحاولة لاحقًا.",

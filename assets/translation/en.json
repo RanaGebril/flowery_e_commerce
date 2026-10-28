@@ -64,6 +64,12 @@
   "resend": "Resend?",
   "resetPasswordTitle": "Reset password",
   "resetPasswordSubTitle": "Password must not be empty and must contain 6 characters with upper case letter and one number at least ",
+  "categories": "Categories",
+  "error": "Something went wrong.",
+  "noCategoriesFound": "No categories found",
+
+
+
 
   "search": "Search",
   "notProvided": "Not Provided",
@@ -75,7 +81,7 @@
   "changePassword": "Change",
 
   "home": "Home",
-  "categories": "Categories",
+
   "cart": "Cart",
   "profile": "Profile",
 
@@ -140,12 +146,11 @@
   "addToCart": "Add to cart",
 
   "viewAll": "View All",
-  "categoriesText": "Categories",
   "bestSellerText": "Best Seller",
   "occasionsText": "Occasion",
 
   "noResponseReceivedMessage": "No response received or response is not in expected format.",
-  "error": "Error",
+
   "unexpectedErrorOccurred": "Unexpected error occurred.",
   "requestCancelled": "Request was cancelled.",
   "receiveTimeout": "Receive timeout, please try again later.",

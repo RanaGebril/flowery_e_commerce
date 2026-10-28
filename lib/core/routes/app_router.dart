@@ -6,7 +6,7 @@ import 'package:flowery_e_commerce/features/auth/presentation/screens/sign_up_sc
 import 'package:flowery_e_commerce/features/auth/presentation/screens/splash_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/upload_photo_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/verify_password_screen.dart';
-import 'package:flowery_e_commerce/features/home_screen.dart';
+import 'package:flowery_e_commerce/features/main_layout.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter appRouter = GoRouter(
@@ -32,7 +32,7 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       name: RoutesNames.home,
       path: '/home',
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) => const MainLayout(),
     ),
     GoRoute(
       name: RoutesNames.forgetPassword,
