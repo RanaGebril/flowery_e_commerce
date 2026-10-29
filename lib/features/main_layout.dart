@@ -1,4 +1,4 @@
-import 'package:flowery_e_commerce/features/explore/presentation/screens/explore_tab.dart';
+import 'package:flowery_e_commerce/features/explore/presentation/screens/home_tab.dart';
 import 'package:flutter/material.dart';
 
 class MainLayout extends StatelessWidget {
@@ -7,7 +7,7 @@ class MainLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ExploreTab(),
+      body: HomeTab(),
       bottomNavigationBar: BottomNavigationBar(
         // currentIndex: state.currentIndex,
         // onTap: (index) {

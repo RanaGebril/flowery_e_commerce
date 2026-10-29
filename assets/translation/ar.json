@@ -66,7 +66,7 @@
   "resetPasswordSubTitle": "يجب ألا تكون كلمة المرور فارغة ويجب أن تحتوي على 6 أحرف على الأقل مع حرف كبير ورقم واحد على الأقل",
   "error": "حدث خطأ.",
   "noCategoriesFound": "لا توجد تصنيفات",
-
+  "bestSeller": "الأكثر مبيعًا",
 
 
   "search": "بحث",
@@ -147,7 +147,7 @@
 
   "viewAll": "عرض الكل",
   "categoriesText": "التصنيفات",
-  "bestSellerText": "الأكثر مبيعًا",
+
   "occasionsText": "المناسبات",
   "noResponseReceivedMessage": "لم يتم استلام استجابة أو الاستجابة ليست بالتنسيق المتوقع.",
   "unexpectedErrorOccurred": "حدث خطأ غير متوقع.",
