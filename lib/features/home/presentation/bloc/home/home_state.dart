@@ -1,8 +1,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:flowery_e_commerce/core/state_status/state_status.dart';
-import 'package:flowery_e_commerce/features/explore/domain/entities/category_entity.dart';
-import 'package:flowery_e_commerce/features/explore/domain/entities/product_entity.dart';
-import 'package:flowery_e_commerce/features/explore/domain/entities/occasion_entity.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/category_entity.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/occasion_entity.dart';
 
 class HomeState extends Equatable {
   final StateStatus<bool> getHomeContentState;

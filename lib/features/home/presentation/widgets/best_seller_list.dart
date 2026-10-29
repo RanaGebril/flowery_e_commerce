@@ -1,4 +1,4 @@
-import 'package:flowery_e_commerce/features/explore/presentation/widgets/header_section.dart';
+import 'package:flowery_e_commerce/features/home/presentation/widgets/header_section.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerList extends StatelessWidget {

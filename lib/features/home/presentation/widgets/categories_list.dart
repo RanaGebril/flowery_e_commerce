@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
 import 'package:flowery_e_commerce/core/widgets/shimmer_effect.dart';
-import 'package:flowery_e_commerce/features/explore/presentation/bloc/home/home_bloc.dart';
-import 'package:flowery_e_commerce/features/explore/presentation/bloc/home/home_state.dart';
-import 'package:flowery_e_commerce/features/explore/presentation/widgets/category_item.dart';
-import 'package:flowery_e_commerce/features/explore/presentation/widgets/category_item_skeleton.dart';
-import 'package:flowery_e_commerce/features/explore/presentation/widgets/header_section.dart';
+import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_bloc.dart';
+import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_state.dart';
+import 'package:flowery_e_commerce/features/home/presentation/widgets/category_item.dart';
+import 'package:flowery_e_commerce/features/home/presentation/widgets/category_item_skeleton.dart';
+import 'package:flowery_e_commerce/features/home/presentation/widgets/header_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

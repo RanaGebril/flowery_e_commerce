@@ -1,4 +1,4 @@
-import 'package:flowery_e_commerce/features/explore/presentation/screens/home_tab.dart';
+import 'package:flowery_e_commerce/features/home/presentation/screens/home_tab.dart';
 import 'package:flutter/material.dart';
 
 class MainLayout extends StatelessWidget {

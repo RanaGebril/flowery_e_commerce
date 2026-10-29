@@ -1,7 +1,7 @@
-import 'package:flowery_e_commerce/features/explore/data/models/category_dto.dart';
-import 'package:flowery_e_commerce/features/explore/data/models/occasions_dto.dart';
-import 'package:flowery_e_commerce/features/explore/data/models/product_dto.dart';
-import 'package:flowery_e_commerce/features/explore/domain/entities/Home_content_entity.dart';
+import 'package:flowery_e_commerce/features/home/data/models/category_dto.dart';
+import 'package:flowery_e_commerce/features/home/data/models/occasions_dto.dart';
+import 'package:flowery_e_commerce/features/home/data/models/product_dto.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/Home_content_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'home_content_response_dto.g.dart';

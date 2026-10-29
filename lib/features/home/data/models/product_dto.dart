@@ -1,4 +1,4 @@
-import 'package:flowery_e_commerce/features/explore/domain/entities/product_entity.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'product_dto.g.dart';
 

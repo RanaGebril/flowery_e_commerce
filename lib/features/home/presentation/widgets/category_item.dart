@@ -1,5 +1,5 @@
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
-import 'package:flowery_e_commerce/features/explore/domain/entities/category_entity.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/category_entity.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {

@@ -1,9 +1,10 @@
-import 'package:flowery_e_commerce/features/explore/domain/entities/occasion_entity.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/category_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
-part 'occasions_dto.g.dart';
+
+part 'category_dto.g.dart';
 
 @JsonSerializable()
-class OccasionsDto {
+class CategoryDto {
   @JsonKey(name: "_id")
   final String? id;
   @JsonKey(name: "name")
@@ -18,8 +19,10 @@ class OccasionsDto {
   final String? createdAt;
   @JsonKey(name: "updatedAt")
   final String? updatedAt;
+  @JsonKey(name: "productsCount")
+  final int? productsCount;
 
-  OccasionsDto ({
+  CategoryDto ({
     this.id,
     this.name,
     this.slug,
@@ -27,26 +30,24 @@ class OccasionsDto {
     this.isSuperAdmin,
     this.createdAt,
     this.updatedAt,
+    this.productsCount,
   });
 
-  factory OccasionsDto.fromJson(Map<String, dynamic> json) {
-    return _$OccasionsDtoFromJson(json);
+  factory CategoryDto.fromJson(Map<String, dynamic> json) {
+    return _$CategoryDtoFromJson(json);
   }
 
   Map<String, dynamic> toJson() {
-    return _$OccasionsDtoToJson(this);
+    return _$CategoryDtoToJson(this);
   }
 
-  OccasionEntity toEntity() {
-    return OccasionEntity(
+  CategoryEntity toEntity() {
+    return CategoryEntity(
       id: id,
       name: name,
       slug: slug,
       image: image,
-      isSuperAdmin: isSuperAdmin,
-      createdAt: createdAt,
-      updatedAt: updatedAt,
+      productsCount: productsCount,
     );
   }
 }
-

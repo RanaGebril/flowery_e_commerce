@@ -1,10 +1,10 @@
 import 'package:bloc/bloc.dart';
 import 'package:flowery_e_commerce/core/result/result.dart';
 import 'package:flowery_e_commerce/core/state_status/state_status.dart';
-import 'package:flowery_e_commerce/features/explore/domain/entities/Home_content_entity.dart';
-import 'package:flowery_e_commerce/features/explore/domain/use_cases/get_home_content_use_case.dart';
-import 'package:flowery_e_commerce/features/explore/presentation/bloc/home/home_event.dart';
-import 'package:flowery_e_commerce/features/explore/presentation/bloc/home/home_state.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/Home_content_entity.dart';
+import 'package:flowery_e_commerce/features/home/domain/use_cases/get_home_content_use_case.dart';
+import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_event.dart';
+import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_state.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
