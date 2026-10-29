@@ -16,7 +16,7 @@ class CategoriesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: context.setHeight(104)),
+        SizedBox(height: context.setHeight(10)),
         HeaderSection(title: 'categories'),
 
         BlocBuilder<HomeBloc, HomeState>(
