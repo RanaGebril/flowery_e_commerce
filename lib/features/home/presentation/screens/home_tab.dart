@@ -3,6 +3,7 @@ import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_blo
 import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_event.dart';
 import 'package:flowery_e_commerce/features/home/presentation/widgets/best_seller_list.dart';
 import 'package:flowery_e_commerce/features/home/presentation/widgets/categories_list.dart';
+import 'package:flowery_e_commerce/features/home/presentation/widgets/occasions_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,9 +15,11 @@ class HomeTab extends StatelessWidget {
     return BlocProvider(
       create: (_) => getIt<HomeBloc>()..add(GetHomeContentEvent()),
       child: Scaffold(
-        body: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [CategoriesList(), BestSellerList()],
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [CategoriesList(), BestSellerList(), OccasionsList()],
+          ),
         ),
       ),
     );

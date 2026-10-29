@@ -1,9 +1,8 @@
-
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerItemSkeleton extends StatelessWidget {
-  const BestSellerItemSkeleton({super.key});
+class HomeCardSkeleton extends StatelessWidget {
+  const HomeCardSkeleton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +18,7 @@ class BestSellerItemSkeleton extends StatelessWidget {
             height: context.setHeight(151),
             width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                context.setRadius(8),
-              ),
+              borderRadius: BorderRadius.circular(context.setRadius(8)),
               color: colorScheme.secondary,
             ),
           ),
