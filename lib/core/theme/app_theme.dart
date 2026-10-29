@@ -32,6 +32,7 @@ class AppTheme {
       labelLarge: AppTextStyles.labelLarge.copyWith(color: AppColors.black),
 labelSmall: AppTextStyles.labelSmall.copyWith(color: AppColors.black,decorationColor: AppColors.black),
       displaySmall: AppTextStyles.displaySmall.copyWith(color: AppColors.black),
+
     ),
     appBarTheme: AppBarThemeData(
       centerTitle: true,

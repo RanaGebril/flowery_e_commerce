@@ -68,7 +68,7 @@
   "error": "Something went wrong.",
   "noCategoriesFound": "No categories found",
   "bestSeller": "Best Seller",
-
+  "egp": "EGP",
 
 
   "search": "Search",
@@ -142,7 +142,7 @@
    "otpValidation": "The code sent to your email address is required",
   "otpValidation2": "You have to enter the 6-digit code",
 
-  "egp": "EGP",
+
   "addToCart": "Add to cart",
 
   "viewAll": "View All",

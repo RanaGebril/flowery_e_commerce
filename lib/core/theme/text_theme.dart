@@ -36,6 +36,12 @@ abstract final class AppTextStyles {
     fontFamily: TextConstants.inter,
   );
 
+  static const TextStyle labelLarge = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    fontFamily: TextConstants.inter,
+  );
+
 
 
   static const TextStyle labelSmall = TextStyle(
@@ -60,9 +66,5 @@ abstract final class AppTextStyles {
 
 
 
-  static const TextStyle labelLarge = TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-    fontFamily: TextConstants.inter,
-  );
+
 }

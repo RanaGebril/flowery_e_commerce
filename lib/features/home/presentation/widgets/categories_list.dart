@@ -17,7 +17,7 @@ class CategoriesList extends StatelessWidget {
     return Column(
       children: [
         SizedBox(height: context.setHeight(104)),
-        CategoriesSectionHeader(title: 'categories'),
+        HeaderSection(title: 'categories'),
 
         BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) {
@@ -56,9 +56,6 @@ class CategoriesList extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 itemCount: categories.length,
                 itemBuilder: (context, index) {
-                  if (index >= categories.length) {
-                    return CustomShimmer(child: const CategoryItemSkeleton());
-                  }
                   return CategoryItem(category: categories[index]);
                 },
               ),

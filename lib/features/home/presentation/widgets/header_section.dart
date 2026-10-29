@@ -3,11 +3,11 @@ import 'package:flowery_e_commerce/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
 
-class CategoriesSectionHeader extends StatelessWidget {
+class HeaderSection extends StatelessWidget {
   final String title;
   final VoidCallback? onViewAll;
 
-  const CategoriesSectionHeader({
+  const HeaderSection({
     super.key,
     required this.title,
     this.onViewAll,
