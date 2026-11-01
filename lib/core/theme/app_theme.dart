@@ -25,14 +25,14 @@ class AppTheme {
       headlineMedium: AppTextStyles.headlineMedium.copyWith(
         color: AppColors.white[90],
       ),
-      titleLarge: AppTextStyles.titleLarge.copyWith(color: AppColors.black),
+      // titleLarge: AppTextStyles.titleLarge.copyWith(color: AppColors.black),
       bodyLarge: AppTextStyles.bodyLarge.copyWith(color: AppColors.black),
       bodyMedium: AppTextStyles.bodyMedium.copyWith(color: AppColors.black),
       bodySmall: AppTextStyles.bodySmall.copyWith(color: AppColors.black),
       labelLarge: AppTextStyles.labelLarge.copyWith(color: AppColors.black),
 labelSmall: AppTextStyles.labelSmall.copyWith(color: AppColors.black,decorationColor: AppColors.black),
       displaySmall: AppTextStyles.displaySmall.copyWith(color: AppColors.black),
-
+      headlineSmall: AppTextStyles.headlineSmall.copyWith(color: AppColors.white[90])
     ),
     appBarTheme: AppBarThemeData(
       centerTitle: true,

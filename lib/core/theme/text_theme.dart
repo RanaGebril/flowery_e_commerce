@@ -2,7 +2,6 @@ import 'package:flowery_e_commerce/core/constants/text_constants.dart';
 import 'package:flutter/material.dart';
 
 abstract final class AppTextStyles {
-
   static const TextStyle headlineLarge = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w500,
@@ -24,7 +23,7 @@ abstract final class AppTextStyles {
     fontFamily: TextConstants.inter,
   );
 
-  static const TextStyle displaySmall =TextStyle(
+  static const TextStyle displaySmall = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
     decoration: TextDecoration.underline,
@@ -42,29 +41,16 @@ abstract final class AppTextStyles {
     fontFamily: TextConstants.inter,
   );
 
-
-
   static const TextStyle labelSmall = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w600,
     fontFamily: TextConstants.inter,
-    decoration: TextDecoration.underline
-
+    decoration: TextDecoration.underline,
   );
 
-
-
-  static const TextStyle titleLarge = TextStyle(
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
+  static const TextStyle headlineSmall = TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.w400,
     fontFamily: TextConstants.inter,
   );
-
-
-
-
-
-
-
-
 }

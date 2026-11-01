@@ -8,7 +8,7 @@ abstract class RoutesNames {
   static const String home = 'home';
   static const String occasion = 'occasion';
   static const String categories = 'categories';
-  static const String details = "details";
+  static const String productDetails = "productDetails";
 
 
   static const String uploadPhoto = 'uploadPhoto';

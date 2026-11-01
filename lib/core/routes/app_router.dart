@@ -6,6 +6,8 @@ import 'package:flowery_e_commerce/features/auth/presentation/screens/sign_up_sc
 import 'package:flowery_e_commerce/features/auth/presentation/screens/splash_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/upload_photo_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/verify_password_screen.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
+import 'package:flowery_e_commerce/features/home/presentation/screens/product_details_screen.dart';
 import 'package:flowery_e_commerce/features/main_layout.dart';
 import 'package:go_router/go_router.dart';
 
@@ -27,6 +29,15 @@ final GoRouter appRouter = GoRouter(
       name: RoutesNames.signup,
       path: '/signup',
       builder: (context, state) =>  SignUpScreen(),
+    ),
+
+    GoRoute(
+      name: RoutesNames.productDetails,
+      path: '/productDetails',
+      builder: (context, state) {
+        final ProductEntity product = state.extra as ProductEntity;
+        return ProductDetailsScreen(product: product);
+      },
     ),
 
     GoRoute(

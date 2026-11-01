@@ -69,9 +69,13 @@
   "bestSeller": "الأكثر مبيعًا",
   "egp": "جنيه",
   "occasion": "المناسبة",
-
-
   "search": "بحث",
+  "status": "الحالة:",
+  "inStock": "متوفر",
+  "outOfStock": "غير متوفر",
+  "taxIncludedMessage": "جميع الأسعار شاملة الضريبة",
+  "description": "الوصف",
+
   "notProvided": "غير متوفر",
 
 
@@ -98,11 +102,6 @@
   "version": "الإصدار 6.3.0 - (446)",
   "changeLanguage": "تغيير اللغة",
 
-  "status": "الحالة: ",
-  "inStock": "متوفر",
-  "outStock": "غير متوفر",
-  "taxIncludedMessage": "جميع الأسعار شاملة الضريبة",
-  "description": "الوصف",
   "addProductToCartSuccessMessage": "لقد تمت إضافة المنتج إلى سلة التسوق الخاصة بك بنجاح",
 
 
