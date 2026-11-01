@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
+import 'package:flowery_e_commerce/core/routes/routes_names.dart';
 import 'package:flowery_e_commerce/core/widgets/shimmer_effect.dart';
 import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_bloc.dart';
 import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_state.dart';
@@ -8,6 +9,7 @@ import 'package:flowery_e_commerce/features/home/presentation/widgets/home_card_
 import 'package:flowery_e_commerce/features/home/presentation/widgets/header_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class BestSellerList extends StatelessWidget {
   const BestSellerList({super.key});
@@ -16,7 +18,13 @@ class BestSellerList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        HeaderSection(title: 'bestSeller'),
+        HeaderSection(
+          title: 'bestSeller',
+          onViewAll: () => context.pushNamed(
+            RoutesNames.bestSellers,
+            extra: context.read<HomeBloc>(),
+          ),
+        ),
         SizedBox(height: context.setHeight(10)),
 
         BlocBuilder<HomeBloc, HomeState>(
@@ -67,6 +75,7 @@ class BestSellerList extends StatelessWidget {
             );
           },
         ),
+        SizedBox(height: context.setHeight(24)),
       ],
     );
   }

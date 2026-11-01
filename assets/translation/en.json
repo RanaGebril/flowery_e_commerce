@@ -76,6 +76,8 @@
   "outOfStock": "Out of stock",
   "taxIncludedMessage": "All prices include tax",
   "description": "Description",
+  "bestSellerTitleBar": "Bloom with our exquisite best sellers",
+
 
   "notProvided": "Not Provided",
 
@@ -107,7 +109,7 @@
   "addProductToCartSuccessMessage": "The product has been successfully added to your cart",
 
 
-  "titleBar": "Bloom with our exquisite best sellers",
+
   "enter6DigitCode": "Please enter the 6-digit code.",
   "resendAvailableStatement": "Resend available in ",
 

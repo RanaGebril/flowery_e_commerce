@@ -7,7 +7,7 @@ class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
     super.key,
     required this.onPressed,
-    required this.buttonTitle,
+     this.buttonTitle,
     this.backgroundColor,
     this.width,
     this.titleStyle,
@@ -18,7 +18,7 @@ class CustomElevatedButton extends StatelessWidget {
   });
 
   final void Function()? onPressed;
-  final String buttonTitle;
+  final String? buttonTitle;
   final Color? backgroundColor;
   final double? width;
   final TextStyle? titleStyle;
@@ -62,7 +62,7 @@ class CustomElevatedButton extends StatelessWidget {
             vertical: context.setHeight(14),
           ),
           child: Text(
-            buttonTitle,
+            buttonTitle??'',
             style: titleStyle ??
                 textTheme.bodyLarge?.copyWith(
                   color: colorScheme.secondary,

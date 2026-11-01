@@ -18,32 +18,36 @@ class BestSellerItem extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return GestureDetector(
-      onTap: () => context.pushNamed(RoutesNames.productDetails,
-        extra: bestSeller,),
+      onTap: () => context.pushNamed(
+        RoutesNames.productDetails,
+        extra: bestSeller,
+      ),
       child: SizedBox(
         width: context.setWidth(131),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: context.setHeight(151),
-              width: double.infinity,
-              child: Image.network(
-                bestSeller.imgCover ?? '',
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) {
-                  return const Icon(Icons.image_not_supported);
-                },
+            // The image takes whatever height is left, so it can never overflow.
+            Expanded(
+              child: SizedBox(
+                width: double.infinity,
+                child: Image.network(
+                  bestSeller.imgCover ?? '',
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) {
+                    return const Center(child: Icon(Icons.image_not_supported));
+                  },
+                ),
               ),
             ),
-            SizedBox(height: context.setHeight(8)),
+            const SizedBox(height: 8),
             Text(
               bestSeller.title ?? '',
               style: textTheme.bodySmall,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
-            SizedBox(height: context.setHeight(4)),
+            const SizedBox(height: 4),
             Text(
               '${bestSeller.price} ${'egp'.tr()}',
               style: textTheme.labelLarge,

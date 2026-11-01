@@ -7,8 +7,11 @@ import 'package:flowery_e_commerce/features/auth/presentation/screens/splash_scr
 import 'package:flowery_e_commerce/features/auth/presentation/screens/upload_photo_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/verify_password_screen.dart';
 import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
+import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_bloc.dart';
+import 'package:flowery_e_commerce/features/home/presentation/screens/best_seller_screen.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/product_details_screen.dart';
 import 'package:flowery_e_commerce/features/main_layout.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter appRouter = GoRouter(
@@ -40,6 +43,14 @@ final GoRouter appRouter = GoRouter(
       },
     ),
 
+    GoRoute(
+      name: RoutesNames.bestSellers,
+      path: '/bestSeller',
+      builder: (context, state) => BlocProvider.value(
+        value: state.extra as HomeBloc,
+        child: const BestSellerScreen(),
+      ),
+    ),
     GoRoute(
       name: RoutesNames.home,
       path: '/home',

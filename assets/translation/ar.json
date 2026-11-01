@@ -75,7 +75,7 @@
   "outOfStock": "غير متوفر",
   "taxIncludedMessage": "جميع الأسعار شاملة الضريبة",
   "description": "الوصف",
-
+  "bestSellerTitleBar": "ازدهر مع أفضل منتجاتنا المميزة",
   "notProvided": "غير متوفر",
 
 
@@ -105,7 +105,7 @@
   "addProductToCartSuccessMessage": "لقد تمت إضافة المنتج إلى سلة التسوق الخاصة بك بنجاح",
 
 
-  "titleBar": "ازدهر مع أفضل منتجاتنا المميزة",
+
   "noProductsFound": "لم يتم العثور على منتجات",
   "enter6DigitCode": "من فضلك أدخل الرمز المكون من 6 أرقام.",
   "resendAvailableStatement": "إعادة الإرسال متاحة بعد ",

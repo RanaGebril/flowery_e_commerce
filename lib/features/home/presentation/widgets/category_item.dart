@@ -1,4 +1,3 @@
-
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
 import 'package:flowery_e_commerce/features/home/domain/entities/category_entity.dart';
 import 'package:flutter/material.dart';
@@ -25,16 +24,12 @@ class CategoryItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: context.setHeight(64),
+            height: 64,
             width: context.setWidth(68),
-            padding: EdgeInsets.all(context.setMinSize(18)),
-            margin: EdgeInsetsDirectional.only(
-              end: context.setWidth(16),
-            ),
+            padding: const EdgeInsets.all(14),
+            margin: EdgeInsetsDirectional.only(end: context.setWidth(16)),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(
-                context.setRadius(20),
-              ),
+              borderRadius: BorderRadius.circular(context.setRadius(20)),
               color: colorScheme.secondary,
             ),
             child: Image.network(
@@ -45,7 +40,7 @@ class CategoryItem extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: context.setHeight(8)),
+          const SizedBox(height: 8),
           SizedBox(
             width: context.setWidth(84),
             child: Text(

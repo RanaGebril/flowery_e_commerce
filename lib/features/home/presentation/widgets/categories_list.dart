@@ -18,7 +18,7 @@ class CategoriesList extends StatelessWidget {
       children: [
         SizedBox(height: context.setHeight(10)),
         HeaderSection(title: 'categories'),
-
+SizedBox(height: context.setHeight(16),),
         BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) {
             final isInitialLoading =
@@ -32,10 +32,11 @@ class CategoriesList extends StatelessWidget {
             if (isInitialLoading) {
               return CustomShimmer(
                 child: SizedBox(
-                  height: context.setHeight(140),
+                  height: 110,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     physics: const NeverScrollableScrollPhysics(),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     itemCount: 6,
                     itemBuilder: (_, __) => const CategoryItemSkeleton(),
                   ),
@@ -50,10 +51,10 @@ class CategoriesList extends StatelessWidget {
             final categories = state.categories;
 
             return SizedBox(
-              height: context.setHeight(140),
+              height: 110,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 itemCount: categories.length,
                 itemBuilder: (context, index) {
                   return CategoryItem(category: categories[index]);

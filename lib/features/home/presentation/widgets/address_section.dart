@@ -15,7 +15,7 @@ class AddressSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Icon(Icons.location_on_rounded, size: context.setMinSize(20)),
+          SizedBox(child: Icon(Icons.location_on_rounded, size: context.setMinSize(20))),
           SizedBox(width: context.setWidth(10)),
           Text('address'.tr(), style: textTheme.labelLarge),
           SizedBox(width: context.setWidth(8)),
