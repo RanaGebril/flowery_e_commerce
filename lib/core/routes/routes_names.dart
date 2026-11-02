@@ -6,16 +6,13 @@ abstract class RoutesNames {
   static const String verifyPassword = '/verifyPassword';
   static const String resetPassword = '/resetPassword';
   static const String home = 'home';
-  static const String occasion = 'occasion';
   static const String categories = 'categories';
   static const String productDetails = "productDetails";
-
-    static const  bestSellers = 'bestSellers';
+  static const bestSellers = 'bestSellers';
+  static const String occasions = '/occasions';
 
   static const String uploadPhoto = 'uploadPhoto';
 
-
-  //   static const  bestSellers = 'bestSellers';
   //   static const String occasions = '/occasions';
   //   static const String productByCat = "productByCat";
   // //AllProductsPage

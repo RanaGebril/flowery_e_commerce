@@ -18,16 +18,14 @@ class BestSellerScreen extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(
           onPressed: context.pop,
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: colorScheme.onSurface,
-          ),
+          icon: Icon(Icons.arrow_back_ios, color: colorScheme.onSurface),
         ),
+        centerTitle: false,
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('bestSeller'.tr(), style: textTheme.headlineLarge),
-            Text('bestSellerTitleBar'.tr(), style: textTheme.headlineSmall),
+            Text('abbBarSubTitle'.tr(), style: textTheme.headlineSmall),
           ],
         ),
       ),
@@ -35,20 +33,14 @@ class BestSellerScreen extends StatelessWidget {
         builder: (context, state) {
           final bestSellers = state.bestSeller;
 
-          if (bestSellers.isEmpty) {
-            return const Center(
-              child: Text('No products available'),
-            );
-          }
-
-          return  GridView.builder(
+          return GridView.builder(
             padding: const EdgeInsets.all(16),
             itemCount: bestSellers.length,
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 220,
               crossAxisSpacing: 12,
               mainAxisSpacing: 12,
-              mainAxisExtent: 250, // fixed height, no more dependence on screen width
+              mainAxisExtent: 250,
             ),
             itemBuilder: (context, index) {
               return ProductCard(product: bestSellers[index]);

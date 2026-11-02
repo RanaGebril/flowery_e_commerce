@@ -9,6 +9,7 @@ import 'package:flowery_e_commerce/features/auth/presentation/screens/verify_pas
 import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
 import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_bloc.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/best_seller_screen.dart';
+import 'package:flowery_e_commerce/features/home/presentation/screens/occasions_screen.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/product_details_screen.dart';
 import 'package:flowery_e_commerce/features/main_layout.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,14 +27,34 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       name: RoutesNames.login,
       path: '/login',
-      builder: (context, state) =>  LoginScreen(),
+      builder: (context, state) => LoginScreen(),
     ),
     GoRoute(
       name: RoutesNames.signup,
       path: '/signup',
-      builder: (context, state) =>  SignUpScreen(),
+      builder: (context, state) => SignUpScreen(),
+    ),
+    GoRoute(
+      name: RoutesNames.forgetPassword,
+      path: '/forgetPassword',
+      builder: (context, state) => ForgetPasswordScreen(),
     ),
 
+    GoRoute(
+      name: RoutesNames.verifyPassword,
+      path: '/verifyPassword',
+      builder: (context, state) => VerifyPasswordScreen(),
+    ),
+    GoRoute(
+      name: RoutesNames.resetPassword,
+      path: '/resetPassword',
+      builder: (context, state) => ResetPasswordScreen(),
+    ),
+    GoRoute(
+      name: RoutesNames.home,
+      path: '/home',
+      builder: (context, state) => const MainLayout(),
+    ),
     GoRoute(
       name: RoutesNames.productDetails,
       path: '/productDetails',
@@ -42,7 +63,6 @@ final GoRouter appRouter = GoRouter(
         return ProductDetailsScreen(product: product);
       },
     ),
-
     GoRoute(
       name: RoutesNames.bestSellers,
       path: '/bestSeller',
@@ -52,31 +72,36 @@ final GoRouter appRouter = GoRouter(
       ),
     ),
     GoRoute(
-      name: RoutesNames.home,
-      path: '/home',
-      builder: (context, state) => const MainLayout(),
-    ),
-    GoRoute(
-      name: RoutesNames.forgetPassword,
-      path: '/forgetPassword',
-      builder: (context, state) =>  ForgetPasswordScreen(),
-    ),
+      name: RoutesNames.occasions,
+      path: '/occasions',
+      builder: (context, state) {
+        final extra = state.extra;
 
-    GoRoute(
-      name: RoutesNames.verifyPassword,
-      path: '/verifyPassword',
-      builder: (context, state) =>  VerifyPasswordScreen(),
-    ),
-    GoRoute(
-      name: RoutesNames.resetPassword,
-      path: '/resetPassword',
-      builder: (context, state) =>  ResetPasswordScreen(),
+        final HomeBloc homeBloc;
+        final String? selectedOccasionId;
+
+        if (extra is HomeBloc) {
+          homeBloc = extra;
+          selectedOccasionId = null;
+        } else {
+          final args = extra as Map<String, dynamic>;
+          homeBloc = args['bloc'] as HomeBloc;
+          selectedOccasionId = args['occasionId'] as String?;
+        }
+
+        return BlocProvider.value(
+          value: homeBloc,
+          child: OccasionsScreen(
+            selectedOccasionId: selectedOccasionId,
+          ),
+        );
+      },
     ),
 
     GoRoute(
       name: RoutesNames.uploadPhoto,
       path: '/uploadPhoto',
       builder: (context, state) => const UploadPhotoScreen(),
-    )
+    ),
   ],
 );

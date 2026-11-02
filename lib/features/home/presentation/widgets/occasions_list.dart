@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
+import 'package:flowery_e_commerce/core/routes/routes_names.dart';
 import 'package:flowery_e_commerce/core/widgets/shimmer_effect.dart';
 import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_bloc.dart';
 import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_state.dart';
@@ -8,6 +9,7 @@ import 'package:flowery_e_commerce/features/home/presentation/widgets/header_sec
 import 'package:flowery_e_commerce/features/home/presentation/widgets/occasion_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class OccasionsList extends StatelessWidget {
   const OccasionsList({super.key});
@@ -16,7 +18,13 @@ class OccasionsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        HeaderSection(title: 'occasion'),
+        HeaderSection(
+          title: 'occasion',
+          onViewAll: () => context.pushNamed(
+            RoutesNames.occasions,
+            extra: context.read<HomeBloc>(),
+          ),
+        ),
         SizedBox(height: context.setHeight(10)),
 
         BlocBuilder<HomeBloc, HomeState>(

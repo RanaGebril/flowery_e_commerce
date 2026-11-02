@@ -76,7 +76,7 @@
   "outOfStock": "Out of stock",
   "taxIncludedMessage": "All prices include tax",
   "description": "Description",
-  "bestSellerTitleBar": "Bloom with our exquisite best sellers",
+  "abbBarSubTitle": "Bloom with our exquisite best sellers",
 
 
   "notProvided": "Not Provided",
@@ -184,7 +184,6 @@
   "noToken": "You are not logged in press to Arrow back to login",
   "cartPage": "Cart",
   "deleteCart": "Item removed successfully",
-
   "bestSellerAppbar": "Best Seller",
   "bestSellerAppbarHint": "Bloom with our exquisite best sellers",
 
