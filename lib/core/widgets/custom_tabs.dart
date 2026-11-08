@@ -30,7 +30,7 @@ class CustomTabs extends StatelessWidget {
             isScrollable: true,
             tabAlignment: TabAlignment.start,
             labelColor: colorScheme.primary,
-            unselectedLabelColor: colorScheme.onSurfaceVariant,
+            unselectedLabelColor: colorScheme.onPrimary,
             labelStyle: textTheme.bodyLarge,
             unselectedLabelStyle: textTheme.bodyLarge,
             indicatorColor: colorScheme.primary,

@@ -6,6 +6,8 @@ import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_sta
 import 'package:flowery_e_commerce/features/home/presentation/widgets/category_item.dart';
 import 'package:flowery_e_commerce/features/home/presentation/widgets/category_item_skeleton.dart';
 import 'package:flowery_e_commerce/features/home/presentation/widgets/header_section.dart';
+import 'package:flowery_e_commerce/layout/bloc/layout_bloc.dart';
+import 'package:flowery_e_commerce/layout/bloc/layout_event.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,8 +19,11 @@ class CategoriesList extends StatelessWidget {
     return Column(
       children: [
         SizedBox(height: context.setHeight(10)),
-        HeaderSection(title: 'categories'),
-SizedBox(height: context.setHeight(16),),
+        HeaderSection(
+          title: 'categories',
+          onViewAll: () => context.read<MainLayoutBloc>().add(OpenCategoriesEvent()),
+        ),
+        SizedBox(height: context.setHeight(16)),
         BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) {
             final isInitialLoading =

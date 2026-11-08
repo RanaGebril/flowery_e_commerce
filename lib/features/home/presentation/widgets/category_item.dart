@@ -1,14 +1,14 @@
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
 import 'package:flowery_e_commerce/features/home/domain/entities/category_entity.dart';
+import 'package:flowery_e_commerce/layout/bloc/layout_bloc.dart';
+import 'package:flowery_e_commerce/layout/bloc/layout_event.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CategoryItem extends StatelessWidget {
   final CategoryEntity category;
 
-  const CategoryItem({
-    required this.category,
-    super.key,
-  });
+  const CategoryItem({required this.category, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class CategoryItem extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        // navigate to categories
+        context.read<MainLayoutBloc>().add(OpenCategoryEvent(category.id!));
       },
       child: Column(
         mainAxisSize: MainAxisSize.min,
