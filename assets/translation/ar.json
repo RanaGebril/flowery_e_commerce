@@ -76,6 +76,14 @@
   "taxIncludedMessage": "جميع الأسعار شاملة الضريبة",
   "description": "الوصف",
   "abbBarSubTitle": "ازدهر مع أفضل منتجاتنا المميزة",
+  "sort": "ترتيب",
+  "sortBy": "ترتيب حسب",
+  "lowestPrice": "السعر من الأقل للأعلى",
+  "highestPrice": "السعر من الأعلى للأقل",
+  "newest": "الأحدث",
+  "oldest": "الأقدم",
+  "discount": "الخصم",
+
   "notProvided": "غير متوفر",
 
 
@@ -125,14 +133,6 @@
   "delete": "حذف",
   "deleteAddressSuccessMessage": "لقد قمت بحذف العنوان المحدد بنجاح",
   "emptyAddressesMessage": "يبدو أنه ليس لديك أي عناوين متاحة حتى الآن!",
-
-  "filter": "تصفية",
-  "sortBy": "ترتيب حسب",
-  "lowestPrice": "الأقل سعرًا",
-  "highestPrice": "الأعلى سعرًا",
-  "newProducts": "جديد",
-  "old": "قديم",
-  "discount": "خصم",
 
   "userNameValidation": "اسم المستخدم غير صالح",
   "emptyTextValidation": "هذا الحقل مطلوب",

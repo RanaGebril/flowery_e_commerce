@@ -3,6 +3,7 @@ import 'package:flowery_e_commerce/core/widgets/custom_tabs.dart';
 import 'package:flowery_e_commerce/core/widgets/custom_tabs_skeleton.dart';
 import 'package:flowery_e_commerce/core/widgets/shimmer_effect.dart';
 import 'package:flowery_e_commerce/features/categories/presentation/bloc/categories/categories_bloc.dart';
+import 'package:flowery_e_commerce/features/categories/presentation/bloc/categories/categories_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,6 +21,10 @@ class CategoriesContent extends StatelessWidget {
 
         if (productsState.isLoading || categoriesState.isLoading) {
           return CustomShimmer(child: CustomTabsSkeleton());
+        }
+
+        if (productsState.isFailure || categoriesState.isFailure) {
+          return Center(child: Text('error'.tr()));
         }
 
         // Data

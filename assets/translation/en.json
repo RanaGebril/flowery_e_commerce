@@ -77,7 +77,13 @@
   "taxIncludedMessage": "All prices include tax",
   "description": "Description",
   "abbBarSubTitle": "Bloom with our exquisite best sellers",
-
+  "sort": "Sort",
+  "sortBy": "Sort by",
+  "lowestPrice": "Lowest Price",
+  "highestPrice": "Highest Price",
+  "newest": "Newest",
+  "oldest": "Oldest",
+  "discount": "Discount",
 
   "notProvided": "Not Provided",
 
@@ -129,13 +135,7 @@
   "deleteAddressSuccessMessage": "You have successfully deleted the selected address",
   "emptyAddressesMessage": "It looks like you don't have any available addresses just yet!",
 
-  "filter": "Filter",
-  "sortBy": "Sort by",
-  "lowestPrice": "Lowest Price",
-  "highestPrice": "Highest Price",
-  "newProducts": "New",
-  "old": "Old",
-  "discount": "Discount",
+
 
   "userNameValidation": "This user name is not valid",
   "emptyTextValidation": "This field is required",

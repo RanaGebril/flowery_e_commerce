@@ -19,4 +19,10 @@ abstract class CategoriesApiClient {
   @GET(EndpointsConstants.categories)
   Future<AllCategoriesResponseDto> getAllCategories();
 
+  @GET(EndpointsConstants.products)
+  Future<AllProductsResponseDto> getSortedProducts(
+      @Query('sort') String sortOPtion,
+      );
+
+
 }

@@ -27,4 +27,12 @@ class CategoriesRepositoryImpl implements CategoriesRepository {
       return response.categories?.map((e) => e.toEntity()).toList() ?? [];
     });
   }
+
+  @override
+  Future<Result<List<ProductEntity>>> getSortedProducts(String sortOption) {
+    return safeCall(() async {
+      var response = await _categoriesApiClient.getSortedProducts(sortOption);
+      return response.products?.map((e) => e.toEntity()).toList() ?? [];
+    });
+  }
 }
