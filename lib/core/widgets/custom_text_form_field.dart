@@ -66,19 +66,18 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
-    final TextEditingController internalController =
-        controller ?? TextEditingController(text: initialValue);
 
     return TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
       onTap: onTap,
       style: style ?? textTheme.bodyMedium,
-      controller: internalController,
+      controller: controller,
       keyboardType: keyboardType,
       obscureText: obscureText,
       obscuringCharacter: obscuringCharacter,
       textInputAction: textInputAction,
       readOnly: isReadOnly ?? false,
+      initialValue: controller == null ? initialValue : null,
       decoration: InputDecoration(
         floatingLabelBehavior: floatingLabelBehavior,
         contentPadding:
@@ -89,12 +88,15 @@ class CustomTextFormField extends StatelessWidget {
             ),
         filled: isReadOnly,
         fillColor: isReadOnly == true ? colorScheme.onPrimary : null,
-        label: FittedBox(
-          fit: BoxFit.scaleDown,
-          child: (label != null)
-              ? Text(label!, style: labelStyle ?? textTheme.bodyMedium)
-              : null,
+        label: label == null
+      ? null
+          : FittedBox(
+      fit: BoxFit.scaleDown,
+        child: Text(
+          label!,
+          style: labelStyle ?? textTheme.bodyMedium,
         ),
+      ),
         hintStyle:
             hintStyle ??
             textTheme.bodyMedium?.copyWith(color: colorScheme.onPrimary),

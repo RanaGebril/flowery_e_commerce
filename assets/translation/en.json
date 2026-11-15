@@ -84,6 +84,7 @@
   "newest": "Newest",
   "oldest": "Oldest",
   "discount": "Discount",
+  "tryAgain": "Try Again",
 
   "notProvided": "Not Provided",
 
@@ -186,10 +187,10 @@
   "deleteCart": "Item removed successfully",
   "bestSellerAppbar": "Best Seller",
   "bestSellerAppbarHint": "Bloom with our exquisite best sellers",
-
-
   "searchForAnyProductsYouWant": "Search for any product you want",
   "noProductsFound": "no products found",
+
+
   "notFound2": "Not Found",
   "noProductsFoundForYourSearch": "No products found for your search",
 

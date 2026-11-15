@@ -8,20 +8,15 @@ import 'package:go_router/go_router.dart';
 class BestSellerItem extends StatelessWidget {
   final ProductEntity bestSeller;
 
-  const BestSellerItem({
-    required this.bestSeller,
-    super.key,
-  });
+  const BestSellerItem({required this.bestSeller, super.key});
 
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
     return GestureDetector(
-      onTap: () => context.pushNamed(
-        RoutesNames.productDetails,
-        extra: bestSeller,
-      ),
+      onTap: () =>
+          context.pushNamed(RoutesNames.productDetails, extra: bestSeller),
       child: SizedBox(
         width: context.setWidth(131),
         child: Column(
