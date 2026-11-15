@@ -10,11 +10,10 @@ abstract class RoutesNames {
   static const String productDetails = "productDetails";
   static const bestSellers = 'bestSellers';
   static const String occasions = '/occasions';
+  static const String search = 'search';
 
   static const String uploadPhoto = 'uploadPhoto';
 
-  //   static const String occasions = '/occasions';
-  //   static const String productByCat = "productByCat";
   // //AllProductsPage
   //   static const String cart = "/cart";
   //   static const String allProducts="/AllProductsPage";

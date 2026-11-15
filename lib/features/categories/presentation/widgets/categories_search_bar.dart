@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
+import 'package:flowery_e_commerce/core/routes/routes_names.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CategoriesSearchBar extends StatelessWidget {
   final double searchBarWidth;
@@ -17,7 +19,9 @@ class CategoriesSearchBar extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        context.pushNamed(RoutesNames.search);
+      },
       child: Container(
         width: context.setWidth(searchBarWidth),
         height: context.setHeight(searchBarHeight),

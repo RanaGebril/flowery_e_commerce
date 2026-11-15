@@ -12,6 +12,7 @@ import 'package:flowery_e_commerce/features/home/presentation/screens/best_selle
 import 'package:flowery_e_commerce/features/home/presentation/screens/occasions_screen.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/product_details_screen.dart';
 import 'package:flowery_e_commerce/features/main_layout.dart';
+import 'package:flowery_e_commerce/features/search/presentation/screens/search_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -98,6 +99,15 @@ final GoRouter appRouter = GoRouter(
       },
     ),
 
+    GoRoute(
+      name: RoutesNames.search,
+      path: '/search',
+      builder: (context, state) => SearchScreen(
+        // productBuilder: (context, product) {
+        //   return ProductCard(product: product);
+        // },
+      ),
+    ),
     GoRoute(
       name: RoutesNames.uploadPhoto,
       path: '/uploadPhoto',
