@@ -1,5 +1,4 @@
 import 'package:flowery_e_commerce/core/routes/routes_names.dart';
-import 'package:flowery_e_commerce/core/widgets/product_card.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/forget_password_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/login_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/reset_password_screen.dart';

@@ -3,10 +3,10 @@ import 'package:flowery_e_commerce/core/state_status/state_status.dart';
 import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
 
 class SearchState extends Equatable {
-   String keyword;
+   final String keyword;
   final StateStatus<List<ProductEntity>> searchStatus;
 
-   SearchState({
+   const SearchState({
     this.keyword = '',
     this.searchStatus = const StateStatus.initial(),
   });
