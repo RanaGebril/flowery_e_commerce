@@ -86,8 +86,10 @@
   "searchForAnyProductsYouWant": "ابحث عن أي منتج تريده",
   "noProductsFound": "لم يتم العثور على منتجات",
   "tryAgain": "حاول مرة أخرى",
-
-
+  "emptyWishlist": "قائمة أمنياتك فارغة ♡",
+  "myWishlist": "قائمة أمنياتي",
+  "wishlistItemsCount": "منتج: ",
+  "wishlistSubtitle": "كل منتجاتك المفضلة في مكان واحد ♡",
 
   "notProvided": "غير متوفر",
 

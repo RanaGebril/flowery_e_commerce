@@ -13,6 +13,7 @@ import 'package:flowery_e_commerce/features/home/presentation/screens/occasions_
 import 'package:flowery_e_commerce/features/home/presentation/screens/product_details_screen.dart';
 import 'package:flowery_e_commerce/features/main_layout.dart';
 import 'package:flowery_e_commerce/features/search/presentation/screens/search_screen.dart';
+import 'package:flowery_e_commerce/features/wishlist/presentation/screens/wishlist_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -103,11 +104,16 @@ final GoRouter appRouter = GoRouter(
       name: RoutesNames.search,
       path: '/search',
       builder: (context, state) => SearchScreen(
-        // productBuilder: (context, product) {
-        //   return ProductCard(product: product);
-        // },
       ),
     ),
+
+    GoRoute(
+      name: RoutesNames.wishlist,
+      path: '/wishlist',
+      builder: (context, state) => WishlistScreen(
+      ),
+    ),
+
     GoRoute(
       name: RoutesNames.uploadPhoto,
       path: '/uploadPhoto',

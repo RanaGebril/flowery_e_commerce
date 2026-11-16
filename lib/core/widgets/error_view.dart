@@ -1,11 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
-
 import 'package:flutter/material.dart';
 
-class SearchErrorView extends StatelessWidget {
+class ErrorView extends StatelessWidget {
   final String errorMessage;
-  const SearchErrorView({required this.errorMessage, super.key});
+  const ErrorView({required this.errorMessage,super.key});
 
   @override
   Widget build(BuildContext context) {

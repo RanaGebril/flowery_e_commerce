@@ -58,7 +58,7 @@ class HomeAppBar extends StatelessWidget {
         CustomOutlinedIconButton(
           icon: Icons.favorite,
           onPressed: () {
-            // Navigate to favorites screen
+            context.pushNamed(RoutesNames.wishlist);
           },
         ),
       ],
