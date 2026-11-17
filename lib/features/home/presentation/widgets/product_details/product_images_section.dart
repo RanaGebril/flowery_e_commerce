@@ -1,11 +1,12 @@
-import 'package:flowery_e_commerce/core/constants/app_colors.dart';
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
+import 'package:flowery_e_commerce/features/home/presentation/widgets/product_details/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ProductImagesSection extends StatefulWidget {
   final List<String> productImages;
-  const ProductImagesSection({required this.productImages, super.key});
+  final bool isFavorite;
+  const ProductImagesSection({required this.productImages,required this.isFavorite, super.key});
 
   @override
   State<ProductImagesSection> createState() => _ProductImagesSectionState();
@@ -70,23 +71,9 @@ class _ProductImagesSectionState extends State<ProductImagesSection> {
         Positioned(
           top: context.setHeight(40),
           right: context.setWidth(30),
-          child: Container(
-            padding: EdgeInsets.all(context.setMinSize(8)),
-            decoration: BoxDecoration(
-              color: colorScheme.secondary,
-              shape: BoxShape.circle,
-              border: BoxBorder.all(
-                width: context.setWidth(1),
-                color:AppColors.green,
-              ),
-            ),
-            child: GestureDetector(
-              child: Icon(
-                Icons.favorite,
-                color: colorScheme.primary,
-                size: 26,
-              ),
-            ),
+          child: FavoriteButton(
+            isFavorite: widget.isFavorite,
+
           ),
         ),
       ],

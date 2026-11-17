@@ -6,7 +6,6 @@ import 'package:flowery_e_commerce/features/auth/presentation/screens/sign_up_sc
 import 'package:flowery_e_commerce/features/auth/presentation/screens/splash_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/upload_photo_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/verify_password_screen.dart';
-import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
 import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_bloc.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/best_seller_screen.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/occasions_screen.dart';
@@ -61,8 +60,8 @@ final GoRouter appRouter = GoRouter(
       name: RoutesNames.productDetails,
       path: '/productDetails',
       builder: (context, state) {
-        final ProductEntity product = state.extra as ProductEntity;
-        return ProductDetailsScreen(product: product);
+        final String productId = state.extra as String;
+        return ProductDetailsScreen(productId: productId);
       },
     ),
     GoRoute(

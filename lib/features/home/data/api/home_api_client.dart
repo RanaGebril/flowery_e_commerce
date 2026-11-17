@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flowery_e_commerce/core/constants/endpoints_constants.dart';
 import 'package:flowery_e_commerce/features/home/data/models/home_content_response_dto.dart';
+import 'package:flowery_e_commerce/features/home/data/models/specific_product_response_dto.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -14,4 +15,9 @@ abstract class HomeApiClient {
 
   @GET(EndpointsConstants.home)
   Future<HomeContentResponseDto> getHomeContent();
+  
+  @GET(EndpointsConstants.specificProduct)
+  Future<SpecificProductResponseDto> getSpecificProduct(
+      @Path('id') String id
+      );
 }

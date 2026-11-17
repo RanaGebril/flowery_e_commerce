@@ -16,7 +16,7 @@ class BestSellerItem extends StatelessWidget {
 
     return GestureDetector(
       onTap: () =>
-          context.pushNamed(RoutesNames.productDetails, extra: bestSeller),
+          context.pushNamed(RoutesNames.productDetails, extra: bestSeller.id),
       child: SizedBox(
         width: context.setWidth(131),
         child: Column(
