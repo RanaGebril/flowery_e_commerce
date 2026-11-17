@@ -22,11 +22,10 @@ class ProductDetailsScreen extends StatelessWidget {
 
     return BlocProvider(
       create: (context) =>
-      getIt<HomeBloc>()..add(GetSpecificProductEvent(productId: productId)),
+          getIt<HomeBloc>()..add(GetSpecificProductEvent(productId: productId)),
       child: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           final product = state.getSpecificProductState.data;
-
           return Scaffold(
             floatingActionButton: Container(
               width: context.setWidth(30),
@@ -44,49 +43,42 @@ class ProductDetailsScreen extends StatelessWidget {
             body: product == null
                 ? const ProductDetailsSkeleton()
                 : LayoutBuilder(
-              builder: (context, constraints) {
-                final List<String> images =
-                (product.images?.isNotEmpty ?? false)
-                    ? product.images!
-                    : [if (product.imgCover != null) product.imgCover!];
-                final bool inStock = (product.quantity ?? 0) > 0;
+                    builder: (context, constraints) {
+                      final bool inStock = (product.quantity ?? 0) > 0;
 
-                return SingleChildScrollView(
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      minHeight: constraints.maxHeight,
-                    ),
-                    child: IntrinsicHeight(
-                      child: Column(
-                        children: [
-                          ProductImagesSection(
-                            productImages: images,
-                            isFavorite: product.isInWishlist ?? false,
+                      return SingleChildScrollView(
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(
+                            minHeight: constraints.maxHeight,
                           ),
-                          ProductInfo(product: product),
-                          const Spacer(),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                              horizontal: context.setWidth(16),
-                              vertical: context.setHeight(12),
-                            ),
-                            child: CustomElevatedButton(
-                              onPressed: inStock
-                                  ? () {
-                                // TODO: add to cart
-                              }
-                                  : null,
-                              buttonTitle: 'addToCart'.tr(),
-                              isText: true,
+                          child: IntrinsicHeight(
+                            child: Column(
+                              children: [
+                                ProductImagesSection(product: product),
+                                ProductInfo(product: product),
+                                const Spacer(),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: context.setWidth(16),
+                                    vertical: context.setHeight(12),
+                                  ),
+                                  child: CustomElevatedButton(
+                                    onPressed: inStock
+                                        ? () {
+                                            // TODO: add to cart
+                                          }
+                                        : null,
+                                    buttonTitle: 'addToCart'.tr(),
+                                    isText: true,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                        ],
-                      ),
-                    ),
+                        ),
+                      );
+                    },
                   ),
-                );
-              },
-            ),
           );
         },
       ),

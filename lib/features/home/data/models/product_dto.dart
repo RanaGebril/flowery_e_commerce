@@ -82,7 +82,7 @@ class ProductsDto {
 
   ProductEntity toEntity() {
     return ProductEntity(
-      id: id,
+      id: Id,
       title: title,
       slug: slug,
       description: description,

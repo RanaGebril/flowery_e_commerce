@@ -1,12 +1,15 @@
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
+import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
 import 'package:flowery_e_commerce/features/home/presentation/widgets/product_details/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ProductImagesSection extends StatefulWidget {
-  final List<String> productImages;
-  final bool isFavorite;
-  const ProductImagesSection({required this.productImages,required this.isFavorite, super.key});
+  final ProductEntity product;
+  const ProductImagesSection({
+    required this.product,
+    super.key,
+  });
 
   @override
   State<ProductImagesSection> createState() => _ProductImagesSectionState();
@@ -37,14 +40,14 @@ class _ProductImagesSectionState extends State<ProductImagesSection> {
               Expanded(
                 child: PageView.builder(
                   controller: imagesController,
-                  itemCount: widget.productImages.length,
+                  itemCount: widget.product.images?.length,
                   itemBuilder: (context, index) {
                     return Center(
                       child: SizedBox(
                         width: context.setWidth(290),
                         height: context.setHeight(350),
                         child: Image.network(
-                          widget.productImages[index],
+                          widget.product.images?[index]??"",
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -55,7 +58,7 @@ class _ProductImagesSectionState extends State<ProductImagesSection> {
               SizedBox(height: context.setHeight(5)),
               SmoothPageIndicator(
                 controller: imagesController,
-                count: widget.productImages.length,
+                count: widget.product.images?.length??0,
                 effect: ScrollingDotsEffect(
                   dotWidth: context.setWidth(8),
                   dotHeight: context.setHeight(8),
@@ -72,8 +75,9 @@ class _ProductImagesSectionState extends State<ProductImagesSection> {
           top: context.setHeight(40),
           right: context.setWidth(30),
           child: FavoriteButton(
-            isFavorite: widget.isFavorite,
-
+            inWishlist: widget.product.isInWishlist??false,
+            productId: widget.product.id??""
+            ,
           ),
         ),
       ],
