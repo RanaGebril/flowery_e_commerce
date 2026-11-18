@@ -10,7 +10,7 @@ import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_blo
 import 'package:flowery_e_commerce/features/home/presentation/screens/best_seller_screen.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/occasions_screen.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/product_details_screen.dart';
-import 'package:flowery_e_commerce/features/main_layout.dart';
+import 'package:flowery_e_commerce/layout/main_layout.dart';
 import 'package:flowery_e_commerce/features/search/presentation/screens/search_screen.dart';
 import 'package:flowery_e_commerce/features/wishlist/presentation/screens/wishlist_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
