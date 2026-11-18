@@ -14,7 +14,6 @@ class WishlistBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: EdgeInsets.all(context.setHeight(16)),
       child: BlocBuilder<WishlistBloc, WishlistState>(

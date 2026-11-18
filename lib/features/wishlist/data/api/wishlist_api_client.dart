@@ -20,4 +20,10 @@ abstract class WishlistApiClient {
 
   @GET(EndpointsConstants.wishlist)
   Future<WishListResponseDto> getWishlist();
+
+  @DELETE(EndpointsConstants.wishlistItem)
+  Future<AddToWishlistResponseDto> removeFromWishlist(
+      @Path('id') String id
+      );
+
 }

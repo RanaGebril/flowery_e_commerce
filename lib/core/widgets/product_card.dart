@@ -9,8 +9,8 @@ import 'package:go_router/go_router.dart';
 
 class ProductCard extends StatelessWidget {
   final ProductEntity product;
-
-  const ProductCard({required this.product, super.key});
+  final ValueChanged<bool?>? onReturn;
+  const ProductCard({required this.product,this.onReturn, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +18,13 @@ class ProductCard extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     return GestureDetector(
-      onTap: () =>
-          context.pushNamed(RoutesNames.productDetails, extra: product.id),
+      onTap:() async{
+        final result = await context.pushNamed<bool>(
+          RoutesNames.productDetails,
+          extra: product.id,
+        );
+        onReturn?.call(result);
+      },
       child: Container(
         padding: EdgeInsets.all(context.setRadius(8)),
         decoration: BoxDecoration(

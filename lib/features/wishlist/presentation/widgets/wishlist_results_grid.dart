@@ -1,7 +1,10 @@
 import 'package:flowery_e_commerce/core/responsive/size_helper.dart';
 import 'package:flowery_e_commerce/core/widgets/product_card.dart';
 import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
+import 'package:flowery_e_commerce/features/wishlist/presentation/bloc/wishlist_bloc.dart';
+import 'package:flowery_e_commerce/features/wishlist/presentation/bloc/wishlist_event.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class WishlistResultsGrid extends StatelessWidget {
   final List<ProductEntity> products;
@@ -20,7 +23,14 @@ class WishlistResultsGrid extends StatelessWidget {
         childAspectRatio: 0.63,
       ),
       itemBuilder: (context, index) {
-        return ProductCard(product: products[index]);
+        return ProductCard(
+          product: products[index],
+          onReturn: (changed) {
+            if (changed == true && context.mounted) {
+              context.read<WishlistBloc>().add(GetWishlistEvent());
+            }
+          },
+        );
       },
     );
   }

@@ -6,4 +6,10 @@ class AddToWishlistEvent extends WishlistEvent {
   AddToWishlistEvent({required this.productId});
 }
 
-class GetWishlistEvent extends WishlistEvent{}
+class RemoveFromWishlistEvent extends WishlistEvent {
+  String productId;
+
+  RemoveFromWishlistEvent({required this.productId});
+}
+
+class GetWishlistEvent extends WishlistEvent {}

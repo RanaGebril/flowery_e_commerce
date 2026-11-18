@@ -4,4 +4,6 @@ import 'package:flowery_e_commerce/features/wishlist/domain/entities/wishlist_re
 abstract interface class WishlistRepository {
   Future<Result<WishlistResponseEntity>> getWishlist();
   Future<Result<void>> addProductToWishlist(String productId);
+  Future<Result<void>> removeFromWishlist(String productId);
+
 }

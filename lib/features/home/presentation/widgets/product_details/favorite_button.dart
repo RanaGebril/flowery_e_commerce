@@ -6,6 +6,7 @@ import 'package:flowery_e_commerce/features/wishlist/presentation/bloc/wishlist_
 import 'package:flowery_e_commerce/features/wishlist/presentation/bloc/wishlist_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class FavoriteButton extends StatefulWidget {
   final String productId;
@@ -32,42 +33,56 @@ class _FavoriteButtonState extends State<FavoriteButton> {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme
-        .of(context)
-        .colorScheme;
+    final colorScheme = Theme.of(context).colorScheme;
 
     return BlocProvider(
       create: (context) => getIt<WishlistBloc>(),
-      child: BlocBuilder<WishlistBloc, WishlistState>(
-        builder: (context, state) {
-          return GestureDetector(
-            onTap: () {
-              //currently remove from wishlist is not working
-              setState(() {
-                isFavorite = !isFavorite;
-              });
-                context.read<WishlistBloc>().add(
-                  AddToWishlistEvent(productId: widget.productId),
-                );
-            },
-            child: Container(
-              padding: EdgeInsets.all(context.setMinSize(8)),
-              decoration: BoxDecoration(
-                color: colorScheme.secondary,
-                shape: BoxShape.circle,
-                border: Border.all(
-                  width: context.setWidth(1),
-                  color: AppColors.green,
+      child: BlocListener<WishlistBloc, WishlistState>(
+        listenWhen: (previous, current) =>
+            previous.removeFromWishlistStatus !=
+            current.removeFromWishlistStatus,
+        listener: (context, state) {
+          if (state.removeFromWishlistStatus.isSuccess) {
+            context.pop(true);
+          }
+        },
+        child: BlocBuilder<WishlistBloc, WishlistState>(
+          builder: (context, state) {
+            return GestureDetector(
+              onTap: () {
+                setState(() {
+                  isFavorite = !isFavorite;
+                });
+
+                if (isFavorite) {
+                  context.read<WishlistBloc>().add(
+                    AddToWishlistEvent(productId: widget.productId),
+                  );
+                } else {
+                  context.read<WishlistBloc>().add(
+                    RemoveFromWishlistEvent(productId: widget.productId),
+                  );
+                }
+              },
+              child: Container(
+                padding: EdgeInsets.all(context.setMinSize(8)),
+                decoration: BoxDecoration(
+                  color: colorScheme.secondary,
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    width: context.setWidth(1),
+                    color: AppColors.green,
+                  ),
+                ),
+                child: Icon(
+                  isFavorite ? Icons.favorite : Icons.favorite_border,
+                  color: colorScheme.primary,
+                  size: 26,
                 ),
               ),
-              child: Icon(
-                isFavorite ? Icons.favorite : Icons.favorite_border,
-                color: colorScheme.primary,
-                size: 26,
-              ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }

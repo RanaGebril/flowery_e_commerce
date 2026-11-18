@@ -25,4 +25,11 @@ class WishlistRepositoryImpl implements WishlistRepository {
       return response.toEntity();
     });
   }
+
+  @override
+  Future<Result<void>> removeFromWishlist(String productId) {
+    return safeCall(() async {
+      await _wishlistApiClient.removeFromWishlist(productId);
+    });
+  }
 }
