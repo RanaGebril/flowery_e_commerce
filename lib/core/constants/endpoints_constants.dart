@@ -16,6 +16,10 @@ abstract final class EndpointsConstants {
   static const String home = 'home';
   static const String categories = 'categories';
   static const String products = 'products';
+  static const String specificProduct = 'products/{id}';
+  static const String wishlist = 'wishlist';
+  static const String wishlistItem = 'wishlist/{id}';
+
 
   // cart
   static const String cart = 'cart';

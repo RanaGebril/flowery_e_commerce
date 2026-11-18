@@ -45,6 +45,8 @@ class ProductsDto {
   final int? v;
   @JsonKey(name: "id")
   final String? id;
+  @JsonKey(name: "isInWishlist")
+  final bool? isInWishlist;
 
   ProductsDto ({
     this.Id,
@@ -67,6 +69,7 @@ class ProductsDto {
     this.updatedAt,
     this.v,
     this.id,
+    this.isInWishlist
   });
 
   factory ProductsDto.fromJson(Map<String, dynamic> json) {
@@ -79,7 +82,7 @@ class ProductsDto {
 
   ProductEntity toEntity() {
     return ProductEntity(
-      id: id,
+      id: Id,
       title: title,
       slug: slug,
       description: description,
@@ -94,6 +97,7 @@ class ProductsDto {
       quantity: quantity,
       category: category,
       occasion: occasion,
+        isInWishlist:isInWishlist
     );
   }
 }

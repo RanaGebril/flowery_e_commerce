@@ -6,13 +6,13 @@ import 'package:flowery_e_commerce/features/auth/presentation/screens/sign_up_sc
 import 'package:flowery_e_commerce/features/auth/presentation/screens/splash_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/upload_photo_screen.dart';
 import 'package:flowery_e_commerce/features/auth/presentation/screens/verify_password_screen.dart';
-import 'package:flowery_e_commerce/features/home/domain/entities/product_entity.dart';
 import 'package:flowery_e_commerce/features/home/presentation/bloc/home/home_bloc.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/best_seller_screen.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/occasions_screen.dart';
 import 'package:flowery_e_commerce/features/home/presentation/screens/product_details_screen.dart';
 import 'package:flowery_e_commerce/features/main_layout.dart';
 import 'package:flowery_e_commerce/features/search/presentation/screens/search_screen.dart';
+import 'package:flowery_e_commerce/features/wishlist/presentation/screens/wishlist_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -60,8 +60,8 @@ final GoRouter appRouter = GoRouter(
       name: RoutesNames.productDetails,
       path: '/productDetails',
       builder: (context, state) {
-        final ProductEntity product = state.extra as ProductEntity;
-        return ProductDetailsScreen(product: product);
+        final String productId = state.extra as String;
+        return ProductDetailsScreen(productId: productId);
       },
     ),
     GoRoute(
@@ -103,11 +103,16 @@ final GoRouter appRouter = GoRouter(
       name: RoutesNames.search,
       path: '/search',
       builder: (context, state) => SearchScreen(
-        // productBuilder: (context, product) {
-        //   return ProductCard(product: product);
-        // },
       ),
     ),
+
+    GoRoute(
+      name: RoutesNames.wishlist,
+      path: '/wishlist',
+      builder: (context, state) => WishlistScreen(
+      ),
+    ),
+
     GoRoute(
       name: RoutesNames.uploadPhoto,
       path: '/uploadPhoto',

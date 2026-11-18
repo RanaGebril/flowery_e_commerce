@@ -11,6 +11,7 @@ abstract class RoutesNames {
   static const bestSellers = 'bestSellers';
   static const String occasions = '/occasions';
   static const String search = 'search';
+  static const String wishlist = 'wishlist';
 
   static const String uploadPhoto = 'uploadPhoto';
 

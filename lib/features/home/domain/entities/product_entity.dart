@@ -16,6 +16,7 @@ class ProductEntity extends Equatable {
   final int? quantity;
   final String? category;
   final String? occasion;
+  final bool? isInWishlist;
 
   const ProductEntity({
     this.id,
@@ -33,6 +34,7 @@ class ProductEntity extends Equatable {
     this.quantity,
     this.category,
     this.occasion,
+    this.isInWishlist
   });
 
   @override
@@ -52,5 +54,6 @@ class ProductEntity extends Equatable {
     quantity,
     category,
     occasion,
+    isInWishlist
   ];
 }

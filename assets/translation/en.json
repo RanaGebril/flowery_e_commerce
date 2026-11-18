@@ -85,7 +85,10 @@
   "oldest": "Oldest",
   "discount": "Discount",
   "tryAgain": "Try Again",
-
+  "emptyWishlist": "Your wishlist is empty ♡",
+  "myWishlist": "My Wishlist",
+  "wishlistItemsCount": "Item: ",
+  "wishlistSubtitle": "Your favorite picks, all in one place ♡",
   "notProvided": "Not Provided",
 
 

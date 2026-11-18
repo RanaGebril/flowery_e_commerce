@@ -3,8 +3,8 @@ import 'package:flowery_e_commerce/core/widgets/product_card_skeleton.dart';
 import 'package:flowery_e_commerce/core/widgets/shimmer_effect.dart';
 import 'package:flutter/material.dart';
 
-class  SearchLoadingView extends StatelessWidget {
-  const SearchLoadingView({super.key});
+class ProductsListLoading extends StatelessWidget {
+  const ProductsListLoading({super.key});
 
   @override
   Widget build(BuildContext context) {
